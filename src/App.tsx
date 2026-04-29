@@ -1,7 +1,7 @@
 import './App.css';
 import { MantineProvider } from '@mantine/core';
 import { Routes, Route } from 'react-router-dom';
-import { HeaderMenu } from './components/HeaderMenu.jsx';
+import { HeaderMenu } from './components/HeaderMenu.tsx';
 import { HomePage } from './pages/HomePage.tsx';
 import { PortfolioPage } from './pages/PortfolioPage.tsx';
 import { AboutPage } from './pages/AboutPage.tsx';
@@ -10,7 +10,7 @@ import React from 'react';
 
 function App() {
   return (
-    <MantineProvider>
+    <MantineProvider theme={{ fontFamily: 'Montserrat, sans-serif' }}>
       <HeaderMenu />
       <Routes>
         <Route path="*" element={<HomePage />} />
