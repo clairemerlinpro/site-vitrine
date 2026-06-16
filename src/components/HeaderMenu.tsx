@@ -36,22 +36,33 @@ export function HeaderMenu() {
   ));
 
   return (
-    <Flex direction="row" align="center" bg="var(--color-grey)" h={80} pl={40} pr={40} style={{ justifyContent: 'space-between' }}>
+    <Flex
+      className="header-menu"
+      direction="row"
+      align="center"
+      bg="var(--color-grey)"
+      h={80}
+      pl={40}
+      pr={40}
+      style={{ justifyContent: 'space-between' }}
+    >
       <Flex direction="row" align="center" gap={20}>
-      <Text size="xl" fw={800} c="var(--color-secondary)">{`</>`}</Text>
-      <Text size='xl' fw={400} c="var(--color-text)">CLAIRE MERLIN</Text>
+        <Text size="xl" fw={800} c="var(--color-secondary)">{`</>`}</Text>
+        <Text size="xl" fw={400} c="var(--color-text)">
+          CLAIRE MERLIN
+        </Text>
       </Flex>
-        <Group gap={8} visibleFrom="xs">
-          {items}
-        </Group>
+      <Group gap={8} visibleFrom="sm">
+        {items}
+      </Group>
 
-        <Burger
-          opened={opened}
-          onClick={toggle}
-          hiddenFrom="xs"
-          size="sm"
-          aria-label="Toggle navigation"
-        />
+      <Burger
+        opened={opened}
+        onClick={toggle}
+        hiddenFrom="sm"
+        size="sm"
+        aria-label="Toggle navigation"
+      />
 
       <Drawer
         opened={opened}
@@ -59,7 +70,7 @@ export function HeaderMenu() {
         size="100%"
         padding="md"
         title="Navigation"
-        hiddenFrom="xs"
+        hiddenFrom="sm"
         zIndex={1000000}
       >
         <ScrollArea h="calc(100vh - 80px)" mx="-md">
