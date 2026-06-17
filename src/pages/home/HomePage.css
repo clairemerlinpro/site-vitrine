@@ -1,5 +1,5 @@
 .light-shadow {
-  box-shadow: 0 4px 12px color-mix(in srgb, var(--color-text) 45%, transparent);
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--color-text) 45%, transparent) !important;
   transition: box-shadow 0.25s ease;
 }
 

@@ -1,11 +1,33 @@
-import { Badge, Title, Text, Flex, Image, Paper, Box, Button } from '@mantine/core';
+import { Badge, Title, Text, Flex, Image, Paper, Box } from '@mantine/core';
 import { ArrowRightIcon, CheckIcon } from '@phosphor-icons/react';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { PrimaryButton } from '../../components/Buttons/PrimaryButton';
+import { SecondaryButton } from '../../components/Buttons/SecondaryButton';
 
 export function HomeAbout() {
+  // -------- Params --------
   const navigate = useNavigate();
 
+  // -------- Store --------
+
+  // -------- States & Refs --------
+
+  // -------- Init --------
+
+  // -------- Helpers --------
+
+  // -------- Callbacks --------
+
+  // -------- Effects --------
+
+  // -------- Renderers --------
+
+  // -------- Loading --------
+
+  // -------- Error --------
+
+  // -------- Main renderer --------
   return (
     <Flex direction="row" gap="xl" align="center" pl={40} pr={40} pt={80} pb={80}>
       <Flex direction="column" mt="md">
@@ -23,24 +45,12 @@ export function HomeAbout() {
           Spécialisée dans les écosystèmes React et iOS.
         </Text>
         <Flex direction="row" gap="md" mt="md">
-          <Button
-            className="button"
-            variant="light"
-            rightSection={<ArrowRightIcon className="button__arrow" size={14} />}
-            c="var(--color-text)"
-            bg="var(--color-primary)"
+          <PrimaryButton
+            iconRight={<ArrowRightIcon className="button__arrow" size={14} />}
             onClick={() => navigate('/portfolio')}
-          >
-            Voir mes projets
-          </Button>
-          <Button
-            className="button"
-            variant="default"
-            bg="transparent"
-            onClick={() => navigate('/contact')}
-          >
-            <Text c="var(--color-text)">Contact</Text>
-          </Button>
+            label="Voir mes projets"
+          />
+          <SecondaryButton onClick={() => navigate('/contact')} label="Contact" />
         </Flex>
       </Flex>
       <Box pos="relative" visibleFrom="sm" w={400} mb={24}>
@@ -52,7 +62,6 @@ export function HomeAbout() {
           src={require('../../assets/photo.jpg')}
         />
         <Paper
-          className="light-shadow"
           p="md"
           pos="absolute"
           bottom={-16}

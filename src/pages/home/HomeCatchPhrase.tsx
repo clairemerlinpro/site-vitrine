@@ -3,7 +3,15 @@ import React from 'react';
 
 export function HomeCatchPhrase() {
   return (
-    <Flex bg={'var(--color-grey'} pl={40} pr={40} pt={80} pb={80} gap="md" align="center">
+    <Flex
+      bg={'var(--color-background-section'}
+      pl={40}
+      pr={40}
+      pt={80}
+      pb={80}
+      gap="md"
+      align="center"
+    >
       <Title order={2} c="var(--color-text)">
         L'excellence technique au service de l'
         <Text span c={'var(--color-secondary'} inherit>

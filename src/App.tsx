@@ -1,12 +1,12 @@
 import './App.css';
 import { Flex, MantineProvider } from '@mantine/core';
 import { Routes, Route } from 'react-router-dom';
-import { HeaderMenu } from './components/HeaderMenu.tsx';
-import { Footer } from './components/Footer.tsx';
-import { HomePage } from './pages/home/HomePage.tsx';
-import { PortfolioPage } from './pages/PortfolioPage.tsx';
-import { AboutPage } from './pages/AboutPage.tsx';
-import { ContactPage } from './pages/ContactPage.tsx';
+import { HeaderMenu } from './components/HeaderMenu';
+import { Footer } from './components/Footer';
+import { HomePage } from './pages/home/HomePage';
+import { PortfolioPage } from './pages/PortfolioPage';
+import { AboutPage } from './pages/AboutPage';
+import { ContactPage } from './pages/ContactPage';
 import React from 'react';
 
 function App() {

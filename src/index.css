@@ -2,11 +2,12 @@
 
 :root {
   --color-background: #222220;
+  --color-background-section: #0b0b0a;
   --color-primary: #8c6445;
   --color-secondary: #bb9476;
   --color-text: #f7f2ee;
   --color-grey: #3c3c39;
-  --color-green : #4A8C45
+  --color-green: #4a8c45;
 }
 
 body {
@@ -17,6 +18,5 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
