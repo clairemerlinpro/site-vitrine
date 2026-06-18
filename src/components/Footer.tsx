@@ -1,13 +1,10 @@
 import React from 'react';
 import { Divider, Flex, Group, Text } from '@mantine/core';
-import { Link } from 'react-router-dom';
 import './Footer.css';
 
 const links = [
-  { link: '/', label: 'Home' },
-  { link: '/portfolio', label: 'Portfolio' },
-  { link: '/about', label: 'About' },
-  { link: '/contact', label: 'Contact' },
+  { link: 'https://www.linkedin.com/in/claire-merlin-062241143/', label: 'LinkedIn' },
+  { link: 'https://github.com/clairemerlinpro', label: 'GitHub' },
 ];
 
 export function Footer() {
@@ -15,15 +12,7 @@ export function Footer() {
 
   return (
     <footer className="footer">
-      <Flex
-        direction="column"
-        bg="var(--color-grey)"
-        pl={40}
-        pr={40}
-        pt={32}
-        pb={32}
-        gap="md"
-      >
+      <Flex direction="column" bg="var(--color-grey)" pl={40} pr={40} pt={32} pb={32} gap="md">
         <Flex
           direction="row"
           align="center"
@@ -40,9 +29,15 @@ export function Footer() {
 
           <Group gap={8}>
             {links.map((item) => (
-              <Link key={item.label} to={item.link} className="footer-link">
+              <a
+                key={item.label}
+                href={item.link}
+                className="footer-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {item.label}
-              </Link>
+              </a>
             ))}
           </Group>
         </Flex>

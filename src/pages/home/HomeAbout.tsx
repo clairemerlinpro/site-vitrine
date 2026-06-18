@@ -50,7 +50,11 @@ export function HomeAbout() {
             onClick={() => navigate('/portfolio')}
             label="Voir mes projets"
           />
-          <SecondaryButton onClick={() => navigate('/contact')} label="Contact" />
+          <SecondaryButton
+            onClick={() => navigate('/contact')}
+            label="Contact"
+            iconRight={<ArrowRightIcon className="button__arrow" size={14} />}
+          />
         </Flex>
       </Flex>
       <Box pos="relative" visibleFrom="sm" w={400} mb={24}>

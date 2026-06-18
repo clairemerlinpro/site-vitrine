@@ -12,7 +12,7 @@ const PROJECTS: Project[] = [
     id: 1,
     name: 'Mutuelle des Motards x Vipali',
     description:
-      "Application de prévention santé à destination des adhérents. Développement de l'application mobile en collaboration avec Vipali, startup lilloise spécialisée dans la prévention santé.",
+      "Application de prévention santé à destination des adhérents.\n Développement de l'application mobile en collaboration avec Vipali, startup lilloise spécialisée dans la prévention santé.",
     image: require('../assets/projects/MotoXP.png'),
     techStack: ['React Native', 'Go'],
   },
@@ -20,26 +20,28 @@ const PROJECTS: Project[] = [
     id: 2,
     name: 'Auchan',
     description:
-      "Application mobile grand public (drive, catalogue, fidélité). Développement de nouvelles fonctionnalités sur l'app grand public en Swift. Migration progressive de composants UIKit vers SwiftUI. Participation active aux rituels Agile et renfort du Product Owner sur le découpage de features.",
+      "Application mobile grand public (drive, catalogue, fidélité).\n Développement de nouvelles fonctionnalités sur l'app grand public en Swift.\n Migration progressive de composants UIKit vers SwiftUI.\n Participation active aux rituels Agile et renfort du Product Owner sur le découpage de features.",
     image: require('../assets/projects/Auchan.png'),
     url: 'https://apps.apple.com/fr/app/auchan-fr-courses-fid%C3%A9lit%C3%A9/id393068659',
     techStack: ['Swift', 'SwiftUI'],
   },
   {
     id: 3,
-    name: 'Project 3',
-    description: 'Description 3',
-    image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png',
-    url: 'https://project3.com',
-    techStack: ['Swift', 'SwiftUI'],
+    name: 'Vivelys',
+    description:
+      "Monitoring de capteurs de cuve à vin.\n Développement d'une app mobile de récupération et synchronisation des données capteurs en mode offline-first.\n Mise en place de graphiques de visualisation des remontées de données.",
+    image: require('../assets/projects/Vivelys.png'),
+    url: 'https://apps.apple.com/fr/app/kyp-mobile/id1555685597',
+    techStack: ['React Native'],
   },
   {
     id: 4,
-    name: 'Project 4',
-    description: 'Description 4',
-    image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png',
-    url: 'https://project4.com',
-    techStack: ['Swift', 'SwiftUI'],
+    name: 'Atelier des Lumières',
+    description:
+      "Refonte complète de l'application.\n Lead technique et gestion de projet sur la refonte de l'application.\n Mise à jour du back-office web.\n Coordination d'une équipe pluridisciplinaire (développement et design).",
+    image: require('../assets/projects/Lumieres.png'),
+    url: 'https://apps.apple.com/fr/app/les-centres-dart-des-lumi%C3%A8res/id1498630996',
+    techStack: ['React Native', 'React', 'TypeScript'],
   },
 ];
 

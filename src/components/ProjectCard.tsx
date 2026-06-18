@@ -31,7 +31,13 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
   // -------- Main renderer --------
   return (
-    <Card shadow="sm" padding="lg" bg="var(--color-grey)">
+    <Card
+      shadow="sm"
+      padding="lg"
+      bg="var(--color-grey)"
+      key={project.id}
+      w={{ base: '100%', md: '40%' }}
+    >
       <Card.Section bg="var(--color-background)">
         <Image fit="contain" src={project.image} height={200} alt="Norway" />
       </Card.Section>
@@ -46,7 +52,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <Title order={2} c="var(--color-text)">
         {project.name}
       </Title>
-      <Text c="var(--color-text)">{project.description}</Text>
+      <Text c="var(--color-text)" style={{ whiteSpace: 'pre-line' }}>
+        {project.description}
+      </Text>
       {project.url && (
         <Flex justify="flex-start" mt="md">
           <PrimaryButton

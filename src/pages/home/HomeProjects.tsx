@@ -43,11 +43,9 @@ export function HomeProjects() {
         Projets
       </Title>
 
-      <Flex direction="row" gap="md" justify="center">
-        <ProjectCard project={PROJECTS[0]} />
-        <ProjectCard project={PROJECTS[1]} />
-        <ProjectCard project={PROJECTS[2]} />
-        <ProjectCard project={PROJECTS[3]} />
+      <Flex direction="row" gap="md" justify="center" wrap="wrap">
+        <ProjectCard key={PROJECTS[0].id} project={PROJECTS[0]} />
+        <ProjectCard key={PROJECTS[1].id} project={PROJECTS[1]} />
       </Flex>
 
       <Flex justify="center" mt="xl">
