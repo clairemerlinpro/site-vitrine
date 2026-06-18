@@ -1,4 +1,4 @@
-import { Flex, Title } from '@mantine/core';
+import { Flex, Title, SimpleGrid } from '@mantine/core';
 import React from 'react';
 import { ProjectCard } from '../../components/ProjectCard';
 import PROJECTS from '../../context/PROJECTS';
@@ -43,10 +43,10 @@ export function HomeProjects() {
         Projets
       </Title>
 
-      <Flex direction="row" gap="md" justify="center" wrap="wrap">
+      <SimpleGrid cols={{ base: 2 }} spacing="md">
         <ProjectCard key={PROJECTS[0].id} project={PROJECTS[0]} />
         <ProjectCard key={PROJECTS[1].id} project={PROJECTS[1]} />
-      </Flex>
+      </SimpleGrid>
 
       <Flex justify="center" mt="xl">
         <PrimaryButton

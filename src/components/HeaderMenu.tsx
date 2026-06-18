@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Burger, Divider, Drawer, Flex, Group, ScrollArea, Text } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
+import { useDisclosure, useWindowScroll } from '@mantine/hooks';
 import { Link, useLocation } from 'react-router-dom';
 import './HeaderMenu.css';
 
@@ -13,6 +13,7 @@ const links = [
 
 export function HeaderMenu() {
   const [opened, { toggle, close }] = useDisclosure(false);
+  const [{ y: scrollY }] = useWindowScroll();
   const location = useLocation();
   const [active, setActive] = useState(location.pathname || links[0].link);
 
@@ -37,7 +38,7 @@ export function HeaderMenu() {
 
   return (
     <Flex
-      className="header-menu"
+      className={`header-menu${scrollY > 0 ? ' header-menu--scrolled' : ''}`}
       direction="row"
       align="center"
       bg="var(--color-grey)"

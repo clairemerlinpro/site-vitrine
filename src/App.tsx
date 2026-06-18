@@ -3,6 +3,7 @@ import { Flex, MantineProvider } from '@mantine/core';
 import { Routes, Route } from 'react-router-dom';
 import { HeaderMenu } from './components/HeaderMenu';
 import { Footer } from './components/Footer';
+import { ScrollToTop } from './components/ScrollToTop';
 import { HomePage } from './pages/home/HomePage';
 import { PortfolioPage } from './pages/PortfolioPage';
 import { AboutPage } from './pages/AboutPage';
@@ -12,6 +13,7 @@ import React from 'react';
 function App() {
   return (
     <MantineProvider theme={{ fontFamily: 'Montserrat, sans-serif' }}>
+      <ScrollToTop />
       <Flex direction="column" mih="100vh" bg="var(--color-background)">
         <HeaderMenu />
         <Flex component="main" direction="column" flex={1}>

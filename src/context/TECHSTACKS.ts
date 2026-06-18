@@ -9,6 +9,7 @@ import typescriptIcon from '../assets/techStacks/typescript.svg';
 import javascriptIcon from '../assets/techStacks/javascript.svg';
 import htmlIcon from '../assets/techStacks/html.svg';
 import cssIcon from '../assets/techStacks/css.svg';
+import tailwindIcon from '../assets/techStacks/tailwind.svg';
 import golangIcon from '../assets/techStacks/golang.svg';
 
 export type TechStack = { id: number; name: string; icon: string };
@@ -25,5 +26,6 @@ export const TECHSTACKS: TechStack[] = [
   { id: 8, name: 'Javascript', icon: javascriptIcon },
   { id: 9, name: 'HTML', icon: htmlIcon },
   { id: 10, name: 'CSS', icon: cssIcon },
-  { id: 11, name: 'Golang', icon: golangIcon },
+  { id: 11, name: 'Tailwind', icon: tailwindIcon },
+  { id: 12, name: 'Golang', icon: golangIcon },
 ];
