@@ -1,6 +1,6 @@
 import React from 'react';
 import { PageLayout } from '../../components/PageLayout';
-import './HomePage.css';
+import '../../index.css';
 import { HomeAbout } from './HomeAbout';
 import { HomeCatchPhrase } from './HomeCatchPhrase';
 import { HomeTechStack } from './HomeTechStack';

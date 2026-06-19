@@ -1,15 +1,30 @@
 import { Button } from '@mantine/core';
 import React from 'react';
+import './Buttons.css';
 
 interface PrimaryButtonProps {
+  large?: boolean;
+  type?: 'button' | 'submit' | 'reset';
   iconRight?: React.ReactNode;
   iconLeft?: React.ReactNode;
-  onClick: () => void;
+  onClick?: () => void;
   label: string;
   url?: string;
+  disabled?: boolean;
+  loading?: boolean;
 }
 
-export function PrimaryButton({ onClick, label, url, iconRight, iconLeft }: PrimaryButtonProps) {
+export function PrimaryButton({
+  type,
+  large,
+  onClick,
+  label,
+  url,
+  iconRight,
+  iconLeft,
+  disabled,
+  loading,
+}: PrimaryButtonProps) {
   // -------- Params --------
 
   // -------- Store --------
@@ -31,8 +46,12 @@ export function PrimaryButton({ onClick, label, url, iconRight, iconLeft }: Prim
   // -------- Error --------
 
   // -------- Main renderer --------
+  const isInactive = disabled || loading;
+
   return (
     <Button
+      type={type ?? 'button'}
+      w={large ? '100%' : 'auto'}
       className="button"
       variant="light"
       rightSection={iconRight}
@@ -40,6 +59,8 @@ export function PrimaryButton({ onClick, label, url, iconRight, iconLeft }: Prim
       c="var(--color-text)"
       bg="var(--color-primary)"
       onClick={onClick}
+      disabled={isInactive}
+      loading={loading}
     >
       {label}
     </Button>

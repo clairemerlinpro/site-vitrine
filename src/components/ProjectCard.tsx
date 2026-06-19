@@ -1,4 +1,4 @@
-import { Card, Image, Text, Badge, Flex, Title, Group } from '@mantine/core';
+import { Card, Image, Text, Badge, Flex, Title } from '@mantine/core';
 import React from 'react';
 import { Project } from '../context/PROJECTS';
 import { ArrowRightIcon } from '@phosphor-icons/react';
@@ -34,13 +34,17 @@ export function ProjectCard({ project }: ProjectCardProps) {
     <Card shadow="sm" padding="lg" bg="var(--color-grey)" key={project.id} w="100%">
       {project.image && (
         <Card.Section bg="white">
-          <Image fit="contain" src={project.image} height={200} alt="Norway" />
+          <Image fit="contain" src={project.image} height={200} />
         </Card.Section>
       )}
 
       <Flex direction="row" gap="md" mt="md" mb="md" wrap="wrap">
         {project.techStack.map((tech) => (
-          <Badge key={tech} variant="white" color="var(--color-grey)">
+          <Badge
+            key={tech}
+            bg="color-mix(in srgb, var(--color-secondary) 40%, var(--color-grey))"
+            color="var(--color-text)"
+          >
             {tech}
           </Badge>
         ))}
