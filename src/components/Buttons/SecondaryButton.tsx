@@ -1,14 +1,24 @@
 import { Button, Text } from '@mantine/core';
 import React from 'react';
+import './Buttons.css';
 
 interface SecondaryButtonProps {
   onClick: () => void;
   label: string;
   iconRight?: React.ReactNode;
   iconLeft?: React.ReactNode;
+  disabled?: boolean;
+  loading?: boolean;
 }
 
-export function SecondaryButton({ onClick, label, iconRight, iconLeft }: SecondaryButtonProps) {
+export function SecondaryButton({
+  onClick,
+  label,
+  iconRight,
+  iconLeft,
+  disabled,
+  loading,
+}: SecondaryButtonProps) {
   // -------- Params --------
 
   // -------- Store --------
@@ -30,6 +40,8 @@ export function SecondaryButton({ onClick, label, iconRight, iconLeft }: Seconda
   // -------- Error --------
 
   // -------- Main renderer --------
+  const isInactive = disabled || loading;
+
   return (
     <Button
       className="button"
@@ -39,8 +51,10 @@ export function SecondaryButton({ onClick, label, iconRight, iconLeft }: Seconda
       c="var(--color-text)"
       rightSection={iconRight}
       leftSection={iconLeft}
+      disabled={isInactive}
+      loading={loading}
     >
-      <Text c="var(--color-text)">{label}</Text>
+      <Text c="inherit">{label}</Text>
     </Button>
   );
 }

@@ -5,6 +5,7 @@ import { AI_TOOLS, CI_CD_TOOLS, METHODS, TECHSTACKS } from '../context/TECHSTACK
 import { TechStackCard } from '../components/TechStackCard';
 import { Formation, FORMATIONS } from '../context/FORMATIONS';
 import { COMPANIES, Company } from '../context/PROJECTS';
+import { PageLayout } from '../components/PageLayout';
 
 export function AboutPage() {
   // -------- Params --------
@@ -44,7 +45,11 @@ export function AboutPage() {
         </Title>
         <Flex direction="row" gap="md" mt="md" mb="md" wrap="wrap">
           {tools.map((tool) => (
-            <Badge key={tool} variant="white" color="var(--color-grey)">
+            <Badge
+              key={tool}
+              bg="color-mix(in srgb, var(--color-secondary) 40%, var(--color-grey))"
+              color="var(--color-grey)"
+            >
               {tool}
             </Badge>
           ))}
@@ -76,12 +81,9 @@ export function AboutPage() {
 
   // -------- Main renderer --------
   return (
-    <Flex direction="column" gap="md" pl={40} pr={40} pt={80} pb={80}>
+    <PageLayout padding={true} title="Mon Parcours">
       <Flex direction="row" gap="xl" align="center">
         <Flex direction="column" gap="md">
-          <Title c="var(--color-text)" order={1} fw={800}>
-            Mon Parcours
-          </Title>
           <Text c="var(--color-text)">
             Ingénieure Fullstack spécialisée dans le développement mobile et web haute performance.
             Mon approche fusionne la rigueur technique du freelance avec une vision produit affûtée,
@@ -138,6 +140,6 @@ export function AboutPage() {
           <FormationCard key={formation.id} formation={formation} />
         ))}
       </SimpleGrid>
-    </Flex>
+    </PageLayout>
   );
 }

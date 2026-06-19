@@ -1,13 +1,13 @@
 import './App.css';
 import { Flex, MantineProvider } from '@mantine/core';
 import { Routes, Route } from 'react-router-dom';
-import { HeaderMenu } from './components/HeaderMenu';
-import { Footer } from './components/Footer';
-import { ScrollToTop } from './components/ScrollToTop';
+import { HeaderMenu } from './components/HeaderMenu/HeaderMenu';
+import { Footer } from './components/Footer/Footer';
+import { ScrollToTop } from './utils/ScrollToTop';
 import { HomePage } from './pages/home/HomePage';
 import { PortfolioPage } from './pages/PortfolioPage';
 import { AboutPage } from './pages/AboutPage';
-import { ContactPage } from './pages/ContactPage';
+import { ContactPage } from './pages/contact/ContactPage';
 import React from 'react';
 
 function App() {

@@ -5,7 +5,7 @@
   "dependencies": {
     "@mantine/carousel": "^9.3.1",
     "@mantine/core": "^9.1.0",
-    "@mantine/form": "^9.1.0",
+    "@mantine/form": "^9.3.2",
     "@mantine/hooks": "^9.1.0",
     "@mantinex/mantine-logo": "^2.0.0",
     "@phosphor-icons/react": "^2.1.10",
