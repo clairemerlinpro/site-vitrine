@@ -29,3 +29,12 @@ export const TECHSTACKS: TechStack[] = [
   { id: 11, name: 'Tailwind', icon: tailwindIcon },
   { id: 12, name: 'Golang', icon: golangIcon },
 ];
+
+export const AI_TOOLS: string[] = ['Cursor', 'Claude', 'Replit'];
+export const CI_CD_TOOLS: string[] = ['GitHub', 'Gitlab', 'GitHub Actions', 'Testflight'];
+export const METHODS: string[] = [
+  'Agile Scrum',
+  'Animation rétrospectives',
+  'Gestion de projet',
+  'Code Review',
+];

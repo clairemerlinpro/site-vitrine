@@ -1,7 +1,8 @@
-import { Flex, Paper, Title, Text, Image } from '@mantine/core';
+import { Flex, Title } from '@mantine/core';
 import React from 'react';
 import { Carousel } from '@mantine/carousel';
-import { TECHSTACKS, TechStack } from '../../context/TECHSTACKS';
+import { TECHSTACKS } from '../../context/TECHSTACKS';
+import { TechStackCard } from '../../components/TechStackCard';
 
 export function HomeTechStack() {
   // -------- Params --------
@@ -19,18 +20,6 @@ export function HomeTechStack() {
   // -------- Effects --------
 
   // -------- Renderers --------
-  const CarouselCard = ({ name, icon }: TechStack) => (
-    <>
-      <Paper bg={'var(--color-grey)'}>
-        <Flex direction={'column'} justify={'center'} align="center" p="md" h="200" gap="md">
-          <Image radius="md" w={100} h={100} src={icon} fit="contain" />
-          <Text fw={600} c="var(--color-text)" ta="center">
-            {name}
-          </Text>
-        </Flex>
-      </Paper>
-    </>
-  );
 
   // -------- Loading --------
 
@@ -51,7 +40,7 @@ export function HomeTechStack() {
       >
         {TECHSTACKS.map((item) => (
           <Carousel.Slide key={item.id}>
-            <CarouselCard {...item} />
+            <TechStackCard tech={item} />
           </Carousel.Slide>
         ))}
       </Carousel>

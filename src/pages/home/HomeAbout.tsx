@@ -1,9 +1,10 @@
-import { Badge, Title, Text, Flex, Image, Paper, Box } from '@mantine/core';
+import { Badge, Title, Text, Flex } from '@mantine/core';
 import { ArrowRightIcon, CheckIcon } from '@phosphor-icons/react';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { PrimaryButton } from '../../components/Buttons/PrimaryButton';
 import { SecondaryButton } from '../../components/Buttons/SecondaryButton';
+import { ProfilePicture } from '../../components/ProfilePicture';
 
 export function HomeAbout() {
   // -------- Params --------
@@ -57,25 +58,7 @@ export function HomeAbout() {
           />
         </Flex>
       </Flex>
-      <Box pos="relative" visibleFrom="sm" w={400} mb={24}>
-        <Image
-          className="light-shadow"
-          radius="md"
-          w={400}
-          h={400}
-          src={require('../../assets/photo.jpg')}
-        />
-        <Paper
-          p="md"
-          pos="absolute"
-          bottom={-16}
-          left={-16}
-          c="var(--color-text)"
-          bg="var(--color-grey)"
-        >
-          <Text fw={600}>6+ ans d'expérience</Text>
-        </Paper>
-      </Box>
+      <ProfilePicture />
     </Flex>
   );
 }

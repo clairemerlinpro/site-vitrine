@@ -1,3 +1,11 @@
+import {
+  GlobeIcon,
+  GraduationCapIcon,
+  Icon,
+  LecternIcon,
+  PersonSimpleRunIcon,
+} from '@phosphor-icons/react';
+
 export type Project = {
   id: number;
   name: string;
@@ -79,6 +87,7 @@ const PROJECTS: Project[] = [
     name: 'CurryCulum',
     description:
       "Outil de mise en forme automatique de CV.\n Développement d'un outil de génération et formatage de CV avec assistance IA.",
+    image: require('../assets/projects/CurryCulum.JPG'),
     techStack: ['React', 'TypeScript', 'Replit'],
   },
   {
@@ -86,6 +95,7 @@ const PROJECTS: Project[] = [
     name: 'Angelo',
     description:
       "Gestion des présences, feuilles de temps et aide au management.\n Développement d'un outil interne de suivi des présences, gestion des feuilles de temps et support au management avec assistance IA.",
+    image: require('../assets/projects/Angelo.JPG'),
     techStack: ['React', 'TypeScript', 'Replit'],
   },
   {
@@ -107,3 +117,53 @@ const PROJECTS: Project[] = [
 ];
 
 export default PROJECTS;
+
+export type Company = {
+  id: number;
+  name: string;
+  date: string;
+  location: string;
+  description?: string;
+  icon: Icon;
+};
+
+export const COMPANIES: Company[] = [
+  {
+    id: 1,
+    name: 'FREELANCE',
+    date: 'DEPUIS AVRIL 2026',
+    location: 'LILLE & REMOTE',
+    icon: GlobeIcon,
+  },
+  {
+    id: 2,
+    name: 'La Mobilery',
+    date: 'NOV 2021 - DÉC 2025',
+    location: 'WASQUEHAL',
+    description: 'Agence de conseil et de développement web et mobile.',
+    icon: GlobeIcon,
+  },
+  {
+    id: 3,
+    name: 'Premedit',
+    date: 'SEPT 2019 - OCT 2021',
+    location: 'Loos',
+    description: 'Startup dans le domaine du sport santé',
+    icon: PersonSimpleRunIcon,
+  },
+  {
+    id: 4,
+    name: 'Stage • 7Digital',
+    date: 'AVR 2018 - AOÛT 2018',
+    location: 'La Madeleine',
+    description: 'Société de streaming musical.',
+    icon: GraduationCapIcon,
+  },
+  {
+    id: 5,
+    name: 'FORMATRICE WEB chez Epitech',
+    date: 'JUIL 2017',
+    location: 'Lille',
+    icon: LecternIcon,
+  },
+];
