@@ -1,0 +1,39 @@
+.light-shadow {
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--color-text) 45%, transparent) !important;
+  transition: box-shadow 0.25s ease;
+}
+
+.button {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px color-mix(in srgb, var(--color-primary) 45%, transparent);
+}
+
+.button__arrow {
+  transition: transform 0.25s ease;
+}
+
+.button:hover .button__arrow {
+  transform: translateX(4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button,
+  .button__arrow {
+    transition: none;
+  }
+
+  .button:hover {
+    transform: none;
+  }
+
+  .button:hover .button__arrow {
+    transform: none;
+  }
+}
