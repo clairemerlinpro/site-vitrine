@@ -1,8 +1,9 @@
 import { Box, Image, Paper, Text } from '@mantine/core';
+import { useTranslation } from 'react-i18next';
 
 export function ProfilePicture() {
   // -------- Params --------
-
+  const { t } = useTranslation();
   // -------- Store --------
 
   // -------- States & Refs --------
@@ -39,7 +40,7 @@ export function ProfilePicture() {
         c="var(--color-text)"
         bg="var(--color-grey)"
       >
-        <Text fw={600}>6+ ans d'expérience</Text>
+        <Text fw={600}>{t('profilePicture.experience')}</Text>
       </Paper>
     </Box>
   );

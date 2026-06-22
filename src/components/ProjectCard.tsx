@@ -3,6 +3,7 @@ import React from 'react';
 import { Project } from '../context/PROJECTS';
 import { ArrowRightIcon } from '@phosphor-icons/react';
 import { PrimaryButton } from './Buttons/PrimaryButton';
+import { useTranslation } from 'react-i18next';
 
 interface ProjectCardProps {
   project: Project;
@@ -10,6 +11,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   // -------- Params --------
+  const { t } = useTranslation();
 
   // -------- Store --------
 
@@ -63,7 +65,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             <PrimaryButton
               iconRight={<ArrowRightIcon className="button__arrow" size={14} />}
               onClick={() => window.open(project.url, '_blank')}
-              label="Voir le projet"
+              label={t('projectCard.viewProject')}
             />
           </Flex>
         )}

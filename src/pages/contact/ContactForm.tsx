@@ -5,9 +5,11 @@ import { ContactFormValues } from '../../services/contactForm';
 import { sendContactEmail } from '../../services/contactForm';
 import { PrimaryButton } from '../../components/Buttons/PrimaryButton';
 import { PaperPlaneRightIcon } from '@phosphor-icons/react';
+import { useTranslation } from 'react-i18next';
 
 export function ContactForm() {
   // -------- Params --------
+  const { t } = useTranslation();
 
   // -------- Store --------
 
@@ -47,12 +49,13 @@ export function ContactForm() {
 
     try {
       await sendContactEmail(values);
-      setSubmitFeedback({ type: 'success', message: 'Message envoyé avec succès !' });
+      setSubmitFeedback({ type: 'success', message: t('contact.form.feedback.successMessage') });
       form.reset();
     } catch (error) {
       setSubmitFeedback({
         type: 'error',
-        message: error instanceof Error ? error.message : 'Une erreur est survenue.',
+        message:
+          error instanceof Error ? error.message : t('contact.form.feedback.errorMessageDefault'),
       });
     } finally {
       setIsSubmitting(false);
@@ -80,7 +83,11 @@ export function ContactForm() {
         <Alert
           mb="md"
           color={submitFeedback.type === 'success' ? 'green' : 'red'}
-          title={submitFeedback.type === 'success' ? 'Succès' : 'Erreur'}
+          title={
+            submitFeedback.type === 'success'
+              ? t('contact.form.feedback.successTitle')
+              : t('contact.form.feedback.errorTitle')
+          }
         >
           {submitFeedback.message}
         </Alert>
@@ -94,16 +101,16 @@ export function ContactForm() {
               flex={1}
               c="var(--color-text)"
               withAsterisk
-              label="Nom"
-              placeholder="john Doe"
+              label={t('contact.form.fields.name.label')}
+              placeholder={t('contact.form.fields.name.placeholder')}
               {...form.getInputProps('name')}
             />
             <TextInput
               flex={1}
               c="var(--color-text)"
               withAsterisk
-              label="Email"
-              placeholder="your@email.com"
+              label={t('contact.form.fields.email.label')}
+              placeholder={t('contact.form.fields.email.placeholder')}
               {...form.getInputProps('email')}
             />
           </Flex>
@@ -112,8 +119,8 @@ export function ContactForm() {
             mb="md"
             c="var(--color-text)"
             withAsterisk
-            label="Message"
-            placeholder="Votre message"
+            label={t('contact.form.fields.message.label')}
+            placeholder={t('contact.form.fields.message.placeholder')}
             {...form.getInputProps('message')}
             styles={{
               root: { flex: 1, display: 'flex', flexDirection: 'column', minHeight: 200 },
@@ -130,7 +137,7 @@ export function ContactForm() {
           <PrimaryButton
             large={true}
             type="submit"
-            label="Envoyer"
+            label={t('contact.form.submit')}
             loading={isSubmitting}
             disabled={isSubmitting || !isFormComplete}
             iconRight={<PaperPlaneRightIcon className="button__arrow" size={14} />}

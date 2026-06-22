@@ -1,0 +1,104 @@
+{
+  "headerMenu": {
+    "home": "Accueil",
+    "portfolio": "Réalisations",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "home": {
+    "about": {
+      "badge": "DISPONIBLE POUR NOUVEAUX PROJETS",
+      "title": "Claire Merlin — Développeuse Freelance Web & Mobile",
+      "techStack": "Swift · React Native · React · Next.js",
+      "description": "Je conçois des applications web et mobile rapides, accessibles et soignées jusqu'au dernier pixel. 6 ans d'expérience auprès de startups et grandes enseignes pour transformer vos idées en produits fiables et performants.",
+      "primaryCta": "Découvrir mes projets",
+      "secondaryCta": "Démarrer un projet"
+    },
+    "catchPhrase": {
+      "titlePart1": "Des interfaces pensées pour vos ",
+      "titleHighlight": "utilisateurs",
+      "paragraph1Part1": "Passionnée par le ",
+      "paragraph1Highlight": "pixel-perfect design",
+      "paragraph1Part2": ", je transforme vos idées les plus complexes en applications fluides, intuitives et agréables à utiliser — du premier wireframe à la mise en production.",
+      "paragraph2": "Chaque ligne de code est pensée pour durer : performance, maintenabilité et accessibilité (RGAA/WCAG) ne sont jamais sacrifiées. Le résultat ? Des produits digitaux fiables, qui inspirent confiance à vos utilisateurs comme à vos équipes techniques."
+    },
+    "techStack": {
+      "title": "Compétences techniques"
+    },
+    "projects": {
+      "title": "Réalisations",
+      "cta": "Voir toutes mes réalisations"
+    },
+    "closingCta": {
+      "title": "Un projet en tête ?",
+      "description": "Que ce soit pour développer une application mobile, refondre votre interface ou renforcer votre équipe sur un projet React/Swift, je peux vous accompagner de l'idée à la mise en production.",
+      "cta": "Discutons de votre projet"
+    }
+  },
+  "profilePicture": {
+    "experience": "6+ ans d'expérience"
+  },
+  "portfolio": {
+    "title": "Mes réalisations",
+    "description": "Des projets concrets, livrés pour des startups comme pour de grandes enseignes, qui illustrent mon expertise technique en React, React Native et Swift."
+  },
+  "projectCard": {
+    "viewProject": "Voir le projet"
+  },
+  "about": {
+    "title": "Mon Parcours",
+    "description": "Développeuse Fullstack spécialisée dans le développement mobile et web haute performance. J'allie la rigueur technique du freelance à une vision produit affûtée, forgée au sein de structures innovantes comme La Mobilery, Premedit et 7Digital. Mon objectif : transformer vos idées en produits fiables, rapides et soignés jusqu'au moindre détail.",
+    "expertise": {
+      "title": "Expertise Technique",
+      "aiTools": "Outils IA",
+      "ciCd": "CI/CD",
+      "methods": "Méthodes"
+    },
+    "formations": {
+      "title": "Formations & Certifications"
+    }
+  },
+  "contact": {
+    "badge": "DISPONIBLE POUR NOUVEAUX PROJETS",
+    "title": {
+      "part1": "Construisons quelque chose ",
+      "highlight": "d'extraordinaire",
+      "part2": " ensemble."
+    },
+    "description": "Que vous ayez déjà un projet précis en tête ou souhaitiez simplement explorer les possibilités, je suis toujours disponible pour échanger sur vos enjeux d'ingénierie haute performance.",
+    "info": {
+      "title": "Informations de contact",
+      "email": "Email",
+      "phone": "Téléphone",
+      "location": "Localisation",
+      "linkedin": "Voir mon LinkedIn",
+      "github": "Voir mon GitHub"
+    },
+    "form": {
+      "fields": {
+        "name": {
+          "label": "Nom",
+          "placeholder": "John Doe",
+          "error": "Le nom est requis"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "votre@email.com",
+          "error": "Email invalide"
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "Votre message",
+          "error": "Le message est requis"
+        }
+      },
+      "submit": "Envoyer",
+      "feedback": {
+        "successTitle": "Succès",
+        "successMessage": "Message envoyé avec succès !",
+        "errorTitle": "Erreur",
+        "errorMessageDefault": "Une erreur est survenue."
+      }
+    }
+  }
+}

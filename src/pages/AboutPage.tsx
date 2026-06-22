@@ -1,20 +1,32 @@
 import React from 'react';
 import { Flex, Title, Text, Divider, SimpleGrid, Paper, Badge, Timeline } from '@mantine/core';
 import { ProfilePicture } from '../components/ProfilePicture';
-import { AI_TOOLS, CI_CD_TOOLS, METHODS, TECHSTACKS } from '../context/TECHSTACKS';
+import {
+  AI_TOOLS,
+  CI_CD_TOOLS,
+  METHODS_EN,
+  METHODS_FR,
+  TECHSTACKS_EN,
+  TECHSTACKS_FR,
+} from '../context/TECHSTACKS';
 import { TechStackCard } from '../components/TechStackCard';
-import { Formation, FORMATIONS } from '../context/FORMATIONS';
-import { COMPANIES, Company } from '../context/PROJECTS';
+import { Formation, FORMATIONS_EN, FORMATIONS_FR } from '../context/FORMATIONS';
+import { COMPANIES_EN, COMPANIES_FR, Company } from '../context/PROJECTS';
 import { PageLayout } from '../components/PageLayout';
+import { useTranslation } from 'react-i18next';
 
 export function AboutPage() {
   // -------- Params --------
-
+  const { t, i18n } = useTranslation();
   // -------- Store --------
 
   // -------- States & Refs --------
 
   // -------- Init --------
+  const formations = i18n.language === 'fr' ? FORMATIONS_FR : FORMATIONS_EN;
+  const companies = i18n.language === 'fr' ? COMPANIES_FR : COMPANIES_EN;
+  const techStacks = i18n.language === 'fr' ? TECHSTACKS_FR : TECHSTACKS_EN;
+  const methods = i18n.language === 'fr' ? METHODS_FR : METHODS_EN;
 
   // -------- Helpers --------
 
@@ -81,16 +93,12 @@ export function AboutPage() {
 
   // -------- Main renderer --------
   return (
-    <PageLayout padding={true} title="Mon Parcours">
+    <PageLayout padding={true} title={t('about.title')}>
       <Flex direction="row" gap="xl" align="center">
         <Flex direction="column" gap="md">
-          <Text c="var(--color-text)">
-            Ingénieure Fullstack spécialisée dans le développement mobile et web haute performance.
-            Mon approche fusionne la rigueur technique du freelance avec une vision produit affûtée,
-            forgée au sein de structures innovantes comme La Mobilery, Premedit, et 7Digital.
-          </Text>
+          <Text c="var(--color-text)">{t('about.description')}</Text>
           <Timeline active={1} bulletSize={24} lineWidth={2} mt="md">
-            {COMPANIES.map((company) => (
+            {companies.map((company) => (
               <TimelineItem key={company.id} company={company} />
             ))}
           </Timeline>
@@ -102,14 +110,14 @@ export function AboutPage() {
         pb="md"
         label={
           <Title c="var(--color-text)" order={2}>
-            Expertise Technique
+            {t('about.expertise.title')}
           </Title>
         }
         labelPosition="left"
       />
       <Flex direction={{ base: 'column', md: 'row' }} gap="md" align="stretch">
         <SimpleGrid cols={{ base: 2, xs: 2, sm: 3, md: 3 }} spacing="md" flex={1} miw={0}>
-          {TECHSTACKS.map((tech) => (
+          {techStacks.map((tech) => (
             <TechStackCard key={tech.id} tech={tech} />
           ))}
         </SimpleGrid>
@@ -120,9 +128,9 @@ export function AboutPage() {
           maw={{ md: '40%' }}
           style={{ flexShrink: 0 }}
         >
-          <ToolsList title="Outils IA" tools={AI_TOOLS} />
-          <ToolsList title="CI/CD" tools={CI_CD_TOOLS} />
-          <ToolsList title="Méthodes" tools={METHODS} />
+          <ToolsList title={t('about.expertise.aiTools')} tools={AI_TOOLS} />
+          <ToolsList title={t('about.expertise.ciCd')} tools={CI_CD_TOOLS} />
+          <ToolsList title={t('about.expertise.methods')} tools={methods} />
         </Flex>
       </Flex>
       <Divider
@@ -130,13 +138,13 @@ export function AboutPage() {
         pb="md"
         label={
           <Title c="var(--color-text)" order={2}>
-            Formations & Certifications
+            {t('about.formations.title')}
           </Title>
         }
         labelPosition="left"
       />
       <SimpleGrid cols={2} spacing="md" flex={1} miw={0}>
-        {FORMATIONS.map((formation) => (
+        {formations.map((formation) => (
           <FormationCard key={formation.id} formation={formation} />
         ))}
       </SimpleGrid>

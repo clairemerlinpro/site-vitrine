@@ -1,7 +1,30 @@
 import { Title, Flex, Text } from '@mantine/core';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 export function HomeCatchPhrase() {
+  // -------- Params --------
+  const { t } = useTranslation();
+
+  // -------- Store --------
+
+  // -------- States & Refs --------
+
+  // -------- Init --------
+
+  // -------- Helpers --------
+
+  // -------- Callbacks --------
+
+  // -------- Effects --------
+
+  // -------- Renderers --------
+
+  // -------- Loading --------
+
+  // -------- Error --------
+
+  // -------- Main renderer --------
   return (
     <Flex
       bg={'var(--color-background-section'}
@@ -13,25 +36,20 @@ export function HomeCatchPhrase() {
       align="center"
     >
       <Title order={2} c="var(--color-text)">
-        L'excellence technique au service de l'
+        {t('home.catchPhrase.titlePart1')}
         <Text span c={'var(--color-secondary'} inherit>
-          innovation
+          {t('home.catchPhrase.titleHighlight')}
         </Text>
       </Title>
       <Flex direction="column" gap="md">
         <Text c="var(--color-text)">
-          Passionnée par le{' '}
+          {t('home.catchPhrase.paragraph1Part1')}
           <Text fw={600} span c={'var(--color-secondary'} inherit>
-            pixel-perfect design
+            {t('home.catchPhrase.paragraph1Highlight')}
           </Text>{' '}
-          et les interfaces centrées sur l'utilisateur, je transforme vos idées complexes en
-          applications fluides et intuitives.
+          {t('home.catchPhrase.paragraph1Part2')}
         </Text>
-        <Text c="var(--color-text)">
-          Chaque ligne de code est pensée pour la performance et la maintenabilité. Mon approche
-          combine rigueur technique et sensibilité esthétique pour créer des produits digitaux qui
-          marquent les esprits.
-        </Text>
+        <Text c="var(--color-text)">{t('home.catchPhrase.paragraph2')}</Text>
       </Flex>
     </Flex>
   );

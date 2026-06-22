@@ -9,10 +9,12 @@ import { Flex, Title, Text } from '@mantine/core';
 import { SecondaryButton } from '../../components/Buttons/SecondaryButton';
 import { useNavigate } from 'react-router-dom';
 import { ArrowRightIcon } from '@phosphor-icons/react';
+import { useTranslation } from 'react-i18next';
 
 export function HomePage() {
   // -------- Params --------
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   // -------- Store --------
 
@@ -50,15 +52,14 @@ export function HomePage() {
         align="center"
       >
         <Title c="var(--color-text)" order={1} fw={800} ta="center">
-          Prêt à lancer votre projet ?
+          {t('home.closingCta.title')}
         </Title>
-        <Text c="var(--color-text)">
-          Besoin d'une expertise front-end de pointe pour votre prochaine application ? Discutons de
-          vos objectifs.
+        <Text c="var(--color-text)" ta="center">
+          {t('home.closingCta.description')}
         </Text>
         <SecondaryButton
           onClick={() => navigate('/contact')}
-          label="Démarrer une conversation"
+          label={t('home.closingCta.cta')}
           iconRight={<ArrowRightIcon className="button__arrow" size={14} />}
         />
       </Flex>

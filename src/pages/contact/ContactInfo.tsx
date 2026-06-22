@@ -5,9 +5,11 @@ import { EnvelopeSimpleIcon, MapPinIcon, PhoneIcon } from '@phosphor-icons/react
 import { CONTACT_EMAIL } from './ContactPage';
 import { SecondaryButton } from '../../components/Buttons/SecondaryButton';
 import { ArrowRightIcon } from '@phosphor-icons/react';
+import { useTranslation } from 'react-i18next';
 
 export function ContactInfo() {
   // -------- Params --------
+  const { t } = useTranslation();
 
   // -------- Store --------
 
@@ -64,22 +66,22 @@ export function ContactInfo() {
   return (
     <Paper shadow="xl" p="xl" bg="var(--color-grey)">
       <Title order={2} c="var(--color-text)">
-        Contact Information
+        {t('contact.info.title')}
       </Title>
       <Flex direction="column" gap="md" mt="md">
         <ContactItem
           icon={<EnvelopeSimpleIcon size={24} color="var(--color-secondary)" />}
-          title="Email"
+          title={t('contact.info.email')}
           value={CONTACT_EMAIL}
         />
         <ContactItem
           icon={<PhoneIcon size={24} color="var(--color-secondary)" />}
-          title="Phone"
+          title={t('contact.info.phone')}
           value="+33 6 12 34 56 78"
         />
         <ContactItem
           icon={<MapPinIcon size={24} color="var(--color-secondary)" />}
-          title="Location"
+          title={t('contact.info.location')}
           value="Lille, France"
         />
       </Flex>
@@ -87,14 +89,14 @@ export function ContactInfo() {
       <Flex direction="row" gap="md" mt="xl">
         <SecondaryButton
           iconRight={<ArrowRightIcon className="button__arrow" size={14} />}
-          label="Voir mon LinkedIn"
+          label={t('contact.info.linkedin')}
           onClick={() =>
             window.open('https://www.linkedin.com/in/claire-merlin-062241143/', '_blank')
           }
         />
         <SecondaryButton
           iconRight={<ArrowRightIcon className="button__arrow" size={14} />}
-          label="Voir mon GitHub"
+          label={t('contact.info.github')}
           onClick={() => window.open('https://github.com/clairemerlinpro', '_blank')}
         />
       </Flex>

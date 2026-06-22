@@ -1,18 +1,39 @@
-import { Title, Text, SimpleGrid } from '@mantine/core';
+import { Text, SimpleGrid } from '@mantine/core';
 import React from 'react';
 import { ProjectCard } from '../components/ProjectCard';
-import PROJECTS from '../context/PROJECTS';
+import { PROJECTS_EN, PROJECTS_FR } from '../context/PROJECTS';
 import { PageLayout } from '../components/PageLayout';
+import { useTranslation } from 'react-i18next';
 
 export function PortfolioPage() {
+  // -------- Params --------
+  const { t, i18n } = useTranslation();
+
+  // -------- Store --------
+
+  // -------- States & Refs --------
+
+  // -------- Init --------
+  const projects = i18n.language === 'fr' ? PROJECTS_FR : PROJECTS_EN;
+
+  // -------- Helpers --------
+
+  // -------- Callbacks --------
+
+  // -------- Effects --------
+
+  // -------- Renderers --------
+
+  // -------- Loading --------
+
+  // -------- Error --------
+
+  // -------- Main renderer --------
   return (
-    <PageLayout padding={true} title="Mes réalisations">
-      <Text c="var(--color-text)">
-        Découvrez mes réalisations, des projets variés qui illustrent mon expertise technique et ma
-        créativité.
-      </Text>
+    <PageLayout padding={true} title={t('portfolio.title')}>
+      <Text c="var(--color-text)">{t('portfolio.description')}</Text>
       <SimpleGrid cols={{ base: 2, xs: 1, sm: 2, md: 3 }} spacing="md" mt="xl">
-        {PROJECTS.map((project) => (
+        {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
       </SimpleGrid>

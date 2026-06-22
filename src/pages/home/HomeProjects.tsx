@@ -1,20 +1,23 @@
 import { Flex, Title, SimpleGrid } from '@mantine/core';
 import React from 'react';
 import { ProjectCard } from '../../components/ProjectCard';
-import PROJECTS from '../../context/PROJECTS';
 import { useNavigate } from 'react-router-dom';
 import { PrimaryButton } from '../../components/Buttons/PrimaryButton';
 import { ArrowRightIcon } from '@phosphor-icons/react';
+import { useTranslation } from 'react-i18next';
+import { PROJECTS_EN, PROJECTS_FR } from '../../context/PROJECTS';
 
 export function HomeProjects() {
   // -------- Params --------
   const navigate = useNavigate();
+  const { t, i18n } = useTranslation();
 
   // -------- Store --------
 
   // -------- States & Refs --------
 
   // -------- Init --------
+  const projects = i18n.language === 'fr' ? PROJECTS_FR : PROJECTS_EN;
 
   // -------- Helpers --------
 
@@ -40,18 +43,18 @@ export function HomeProjects() {
       direction="column"
     >
       <Title order={2} c="var(--color-text)">
-        Projets
+        {t('home.projects.title')}
       </Title>
 
       <SimpleGrid cols={{ base: 2 }} spacing="md">
-        <ProjectCard key={PROJECTS[0].id} project={PROJECTS[0]} />
-        <ProjectCard key={PROJECTS[1].id} project={PROJECTS[1]} />
+        <ProjectCard key={projects[0].id} project={projects[0]} />
+        <ProjectCard key={projects[1].id} project={projects[1]} />
       </SimpleGrid>
 
       <Flex justify="center" mt="xl">
         <PrimaryButton
           onClick={() => navigate('/portfolio')}
-          label="Voir tous les projets"
+          label={t('home.projects.cta')}
           iconRight={<ArrowRightIcon className="button__arrow" size={14} />}
         />
       </Flex>
