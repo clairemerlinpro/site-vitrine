@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Burger, Divider, Drawer, Flex, Group, ScrollArea, Text } from '@mantine/core';
+import { Burger, Divider, Drawer, Flex, Group, ScrollArea } from '@mantine/core';
 import { useDisclosure, useWindowScroll } from '@mantine/hooks';
 import { Link, useLocation } from 'react-router-dom';
 import './HeaderMenu.css';
 import { LanguageSwitch } from '../Buttons/LanguageSwitch';
 import { useTranslation } from 'react-i18next';
-import { ReactComponent as Logo } from '../../assets/logo-icon-only.svg';
+import { LogoDark } from '../Logo/LogoDark';
 
 export function HeaderMenu() {
   // -------- Params --------
@@ -65,12 +65,7 @@ export function HeaderMenu() {
       pr={40}
       style={{ justifyContent: 'space-between' }}
     >
-      <Flex direction="row" align="center" gap="md">
-        <Logo width={40} height={40} />
-        <Text size="xl" fw={400} c="var(--color-text)">
-          CLAIRE MERLIN
-        </Text>
-      </Flex>
+      <LogoDark width={200} height={200} />
       <Group gap={8} visibleFrom="sm">
         {items}
       </Group>
