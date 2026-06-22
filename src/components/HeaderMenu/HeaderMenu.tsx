@@ -5,6 +5,7 @@ import { Link, useLocation } from 'react-router-dom';
 import './HeaderMenu.css';
 import { LanguageSwitch } from '../Buttons/LanguageSwitch';
 import { useTranslation } from 'react-i18next';
+import { ReactComponent as Logo } from '../../assets/logo-icon-only.svg';
 
 export function HeaderMenu() {
   // -------- Params --------
@@ -64,8 +65,8 @@ export function HeaderMenu() {
       pr={40}
       style={{ justifyContent: 'space-between' }}
     >
-      <Flex direction="row" align="center" gap={20}>
-        <Text size="xl" fw={800} c="var(--color-secondary)">{`</>`}</Text>
+      <Flex direction="row" align="center" gap="md">
+        <Logo width={40} height={40} />
         <Text size="xl" fw={400} c="var(--color-text)">
           CLAIRE MERLIN
         </Text>
