@@ -1,17 +1,20 @@
 import { Flex, Title } from '@mantine/core';
 import React from 'react';
 import { Carousel } from '@mantine/carousel';
-import { TECHSTACKS } from '../../context/TECHSTACKS';
+import { TECHSTACKS_EN, TECHSTACKS_FR } from '../../context/TECHSTACKS';
 import { TechStackCard } from '../../components/TechStackCard';
+import { useTranslation } from 'react-i18next';
 
 export function HomeTechStack() {
   // -------- Params --------
+  const { t, i18n } = useTranslation();
 
   // -------- Store --------
 
   // -------- States & Refs --------
 
   // -------- Init --------
+  const techStacks = i18n.language === 'fr' ? TECHSTACKS_FR : TECHSTACKS_EN;
 
   // -------- Helpers --------
 
@@ -30,7 +33,7 @@ export function HomeTechStack() {
   return (
     <Flex pl={40} pr={40} pt={80} pb={80} gap="md" direction="column">
       <Title order={2} c="var(--color-text)">
-        TECH STACK
+        {t('home.techStack.title')}
       </Title>
       <Carousel
         height={200}
@@ -38,7 +41,7 @@ export function HomeTechStack() {
         slideGap={{ base: 0, xs: 'md' }}
         emblaOptions={{ loop: true, align: 'start' }}
       >
-        {TECHSTACKS.map((item) => (
+        {techStacks.map((item) => (
           <Carousel.Slide key={item.id}>
             <TechStackCard tech={item} />
           </Carousel.Slide>

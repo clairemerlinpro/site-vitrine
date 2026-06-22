@@ -3,24 +3,35 @@ import { Burger, Divider, Drawer, Flex, Group, ScrollArea, Text } from '@mantine
 import { useDisclosure, useWindowScroll } from '@mantine/hooks';
 import { Link, useLocation } from 'react-router-dom';
 import './HeaderMenu.css';
-
-const links = [
-  { link: '/', label: 'Home' },
-  { link: '/portfolio', label: 'Portfolio' },
-  { link: '/about', label: 'About' },
-  { link: '/contact', label: 'Contact' },
-];
+import { LanguageSwitch } from '../Buttons/LanguageSwitch';
+import { useTranslation } from 'react-i18next';
 
 export function HeaderMenu() {
-  const [opened, { toggle, close }] = useDisclosure(false);
+  // -------- Params --------
+  const { t } = useTranslation();
   const [{ y: scrollY }] = useWindowScroll();
   const location = useLocation();
-  const [active, setActive] = useState(location.pathname || links[0].link);
+  const [opened, { toggle, close }] = useDisclosure(false);
+  const [active, setActive] = useState(location.pathname || '/');
 
+  // -------- Store --------
+
+  // -------- States & Refs --------
+
+  // -------- Init --------
+  const links = [
+    { link: '/', label: t('headerMenu.home') },
+    { link: '/portfolio', label: t('headerMenu.portfolio') },
+    { link: '/about', label: t('headerMenu.about') },
+    { link: '/contact', label: t('headerMenu.contact') },
+  ];
+
+  // -------- Effects --------
   useEffect(() => {
-    setActive(location.pathname || links[0].link);
+    setActive(location.pathname || '/');
   }, [location.pathname]);
 
+  // -------- Renderers --------
   const items = links.map((link) => (
     <Link
       key={link.label}
@@ -35,6 +46,12 @@ export function HeaderMenu() {
       {link.label}
     </Link>
   ));
+
+  // -------- Loading --------
+
+  // -------- Error --------
+
+  // -------- Main renderer --------
 
   return (
     <Flex
@@ -56,7 +73,7 @@ export function HeaderMenu() {
       <Group gap={8} visibleFrom="sm">
         {items}
       </Group>
-
+      <LanguageSwitch />
       <Burger
         opened={opened}
         onClick={toggle}
