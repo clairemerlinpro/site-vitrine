@@ -57,5 +57,48 @@
     "formations": {
       "title": "Formations & Certifications"
     }
+  },
+  "contact": {
+    "badge": "DISPONIBLE POUR NOUVEAUX PROJETS",
+    "title": {
+      "part1": "Construisons quelque chose ",
+      "highlight": "d'extraordinaire",
+      "part2": " ensemble."
+    },
+    "description": "Que vous ayez déjà un projet précis en tête ou souhaitiez simplement explorer les possibilités, je suis toujours disponible pour échanger sur vos enjeux d'ingénierie haute performance.",
+    "info": {
+      "title": "Informations de contact",
+      "email": "Email",
+      "phone": "Téléphone",
+      "location": "Localisation",
+      "linkedin": "Voir mon LinkedIn",
+      "github": "Voir mon GitHub"
+    },
+    "form": {
+      "fields": {
+        "name": {
+          "label": "Nom",
+          "placeholder": "John Doe",
+          "error": "Le nom est requis"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "votre@email.com",
+          "error": "Email invalide"
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "Votre message",
+          "error": "Le message est requis"
+        }
+      },
+      "submit": "Envoyer",
+      "feedback": {
+        "successTitle": "Succès",
+        "successMessage": "Message envoyé avec succès !",
+        "errorTitle": "Erreur",
+        "errorMessageDefault": "Une erreur est survenue."
+      }
+    }
   }
 }

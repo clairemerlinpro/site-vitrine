@@ -57,5 +57,48 @@
     "training": {
       "title": "Training & Certifications"
     }
+  },
+  "contact": {
+    "badge": "AVAILABLE FOR NEW PROJECTS",
+    "title": {
+      "part1": "Let's build something ",
+      "highlight": "extraordinary",
+      "part2": "together."
+    },
+    "description": "Whether you already have a specific project in mind or simply want to explore the possibilities, I am always available to discuss your high-performance engineering challenges.",
+    "info": {
+      "title": "Contact Information",
+      "email": "Email",
+      "phone": "Telephone",
+      "location": "Location",
+      "linkedin": "View my LinkedIn",
+      "github": "View my GitHub"
+    },
+    "form": {
+      "fields": {
+        "name": {
+          "label": "Name",
+          "placeholder": "John Doe",
+          "error": "Name is required"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "your@email.com",
+          "error": "Invalid Email"
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "Your message",
+          "error": "Message is required"
+        }
+      },
+      "submit": "Submit",
+      "feedback": {
+        "successTitle": "Success",
+        "successMessage": "Message sent successfully!",
+        "errorTitle": "Error",
+        "errorMessageDefault": "An error has occurred."
+      }
+    }
   }
 }
