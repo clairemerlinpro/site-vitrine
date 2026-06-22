@@ -1,6 +1,7 @@
 import React from 'react';
 import { Divider, Flex, Group, Text } from '@mantine/core';
 import './Footer.css';
+import { LogoDark } from '../Logo/LogoDark';
 
 const links = [
   { link: 'https://www.linkedin.com/in/claire-merlin-062241143/', label: 'LinkedIn' },
@@ -12,21 +13,16 @@ export function Footer() {
 
   return (
     <footer className="footer">
-      <Flex direction="column" bg="var(--color-grey)" pl={40} pr={40} pt={32} pb={32} gap="md">
+      <Flex direction="column" bg="var(--color-grey)" pl={40} pr={40} pb={40} gap="md">
         <Flex
           direction="row"
           align="center"
           wrap="wrap"
           gap="md"
+          h={80}
           style={{ justifyContent: 'space-between' }}
         >
-          <Flex direction="row" align="center" gap={12}>
-            <Text size="lg" fw={800} c="var(--color-secondary)">{`</>`}</Text>
-            <Text size="lg" fw={400} c="var(--color-text)">
-              CLAIRE MERLIN
-            </Text>
-          </Flex>
-
+          <LogoDark width={200} />
           <Group gap={8}>
             {links.map((item) => (
               <a
