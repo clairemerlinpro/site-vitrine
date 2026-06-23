@@ -1,11 +1,11 @@
-import { Box, Paper, Title, Text, Divider } from '@mantine/core';
-
+import { Paper, Title, Divider } from '@mantine/core';
 import { Flex } from '@mantine/core';
 import { EnvelopeSimpleIcon, MapPinIcon, PhoneIcon } from '@phosphor-icons/react/dist/ssr';
 import { CONTACT_EMAIL } from './ContactPage';
 import { SecondaryButton } from '../../components/Buttons/SecondaryButton';
 import { ArrowRightIcon } from '@phosphor-icons/react';
 import { useTranslation } from 'react-i18next';
+import { InfoItem } from '../../components/InfoItem';
 
 export function ContactInfo() {
   // -------- Params --------
@@ -16,6 +16,23 @@ export function ContactInfo() {
   // -------- States & Refs --------
 
   // -------- Init --------
+  const infoItems = [
+    {
+      icon: <EnvelopeSimpleIcon size={24} color="var(--color-secondary)" />,
+      title: t('contact.info.email'),
+      value: CONTACT_EMAIL,
+    },
+    {
+      icon: <PhoneIcon size={24} color="var(--color-secondary)" />,
+      title: t('contact.info.phone'),
+      value: '+33 6 38 51 86 92',
+    },
+    {
+      icon: <MapPinIcon size={24} color="var(--color-secondary)" />,
+      title: t('contact.info.location'),
+      value: 'Lille, France',
+    },
+  ];
 
   // -------- Helpers --------
 
@@ -24,39 +41,6 @@ export function ContactInfo() {
   // -------- Effects --------
 
   // -------- Renderers --------
-  function ContactItem({
-    icon,
-    value,
-    title,
-  }: {
-    icon: React.ReactNode;
-    value: string;
-    title: string;
-  }) {
-    return (
-      <Flex direction="row" gap="md" align="center">
-        <Box
-          p="sm"
-          bg="color-mix(in srgb, var(--color-secondary) 20%, var(--color-grey))"
-          style={{
-            borderRadius: 'var(--mantine-radius-md)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            flexShrink: 0,
-          }}
-        >
-          {icon}
-        </Box>
-        <Flex direction="column">
-          <Text c="var(--color-secondary)" fw={600}>
-            {title}
-          </Text>
-          <Text c="var(--color-text)">{value}</Text>
-        </Flex>
-      </Flex>
-    );
-  }
 
   // -------- Loading --------
 
@@ -69,21 +53,9 @@ export function ContactInfo() {
         {t('contact.info.title')}
       </Title>
       <Flex direction="column" gap="md" mt="md">
-        <ContactItem
-          icon={<EnvelopeSimpleIcon size={24} color="var(--color-secondary)" />}
-          title={t('contact.info.email')}
-          value={CONTACT_EMAIL}
-        />
-        <ContactItem
-          icon={<PhoneIcon size={24} color="var(--color-secondary)" />}
-          title={t('contact.info.phone')}
-          value="+33 6 12 34 56 78"
-        />
-        <ContactItem
-          icon={<MapPinIcon size={24} color="var(--color-secondary)" />}
-          title={t('contact.info.location')}
-          value="Lille, France"
-        />
+        {infoItems.map((item) => (
+          <InfoItem key={item.title} {...item} />
+        ))}
       </Flex>
       <Divider mt="xl" color="var(--color-primary)" />
       <Flex direction={{ base: 'column', sm: 'row' }} gap="md" mt="xl" wrap="wrap">

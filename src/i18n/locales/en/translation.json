@@ -100,5 +100,39 @@
         "errorMessageDefault": "An error has occurred."
       }
     }
+  },
+  "legalNotice": {
+    "title": "Legal notice",
+    "tocLabel": "Table of contents",
+    "sections": {
+      "editor": {
+        "title": "Site publisher",
+        "name": "Name",
+        "legalStatus": { "title": "Legal status", "value": "Individual entrepreneur" },
+        "address": "Address",
+        "siren": "Siren/Siret number",
+        "vat": "VAT number",
+        "phone": "Phone",
+        "email": "Email"
+      },
+      "hosting": {
+        "title": "Hosting provider",
+        "name": "Name",
+        "address": "Address",
+        "website": "Website"
+      },
+      "intellectualProperty": {
+        "title": "Intellectual property",
+        "body": "All content on this website (text, images, photographs, logos, icons, videos, layout, source code, etc.) is, unless otherwise stated, the exclusive property of Claire Merlin, or subject to an authorization of use by their respective authors or beneficiaries.\n\nAny reproduction, distribution, modification, adaptation, retransmission or publication, even partial, of these different elements is strictly prohibited without the prior written consent of Claire Merlin, whatever the means or the process used.\n\nAny unauthorized exploitation of the site or any of its elements will be considered as constituting an infringement and pursued in accordance with the provisions of articles L.335-2 and following of the Intellectual Property Code."
+      },
+      "personalData": {
+        "title": "Personal data",
+        "body": "The site offers a contact form allowing visitors to send an email request. The information collected through this form (name, email address, message, and any other field you propose) is used solely to respond to your request and is neither sold, nor shared, nor transmitted to third parties.\n\nThese data are kept for a period of 12 months from our exchange, then deleted.\n\nIn accordance with the General Data Protection Regulation (GDPR) and the Informatics and Liberties Law, you have a right of access, rectification, deletion and opposition concerning your personal data. You can exercise this right by contacting us at the following address: clairemerlinpro@outlook.fr."
+      },
+      "cookies": {
+        "title": "Cookies",
+        "body": "This website does not use tracking or advertising cookies. Only technical cookies strictly necessary for the site to function may be stored."
+      }
+    }
   }
 }

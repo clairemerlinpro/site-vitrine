@@ -1,0 +1,58 @@
+.legal-notice-layout {
+  margin-top: var(--mantine-spacing-xl);
+}
+
+.legal-notice-toc {
+  position: sticky;
+  top: 96px;
+  align-self: flex-start;
+  width: 100%;
+  max-width: 280px;
+}
+
+.legal-notice-button {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  height: auto;
+  padding: 8px 12px;
+  color: var(--color-text) !important;
+  font-weight: 500;
+  background-color: transparent !important;
+}
+
+.legal-notice-button[data-active] {
+  background-color: var(--color-primary) !important;
+  color: var(--color-text) !important;
+}
+
+.legal-notice-button:hover {
+  background-color: color-mix(in srgb, var(--color-secondary) 35%, transparent) !important;
+}
+
+.legal-notice-button[data-active]:hover {
+  background-color: var(--color-primary) !important;
+}
+
+.legal-notice-content {
+  padding-bottom: 50vh;
+}
+
+.legal-notice-content h2 {
+  scroll-margin-top: 96px;
+}
+
+.legal-notice-section + .legal-notice-section {
+  margin-top: var(--mantine-spacing-xl);
+}
+
+.legal-notice-body {
+  white-space: pre-line;
+}
+
+@media (max-width: 48em) {
+  .legal-notice-toc {
+    position: static;
+    max-width: none;
+  }
+}

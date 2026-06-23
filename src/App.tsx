@@ -9,6 +9,7 @@ import { PortfolioPage } from './pages/PortfolioPage';
 import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/contact/ContactPage';
 import React from 'react';
+import { LegalNotice } from './pages/legalNotice/LegalNotice';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/portfolio" element={<PortfolioPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/legal-notice" element={<LegalNotice />} />
           </Routes>
         </Flex>
         <Footer />
