@@ -100,5 +100,39 @@
         "errorMessageDefault": "Une erreur est survenue."
       }
     }
+  },
+  "legalNotice": {
+    "title": "Mentions légales",
+    "tocLabel": "Sommaire",
+    "sections": {
+      "editor": {
+        "title": "Éditrice du site",
+        "name": "Nom",
+        "legalStatus": { "title": "Statut juridique", "value": "Entrepreneuse individuelle" },
+        "address": "Adresse",
+        "siren": "Numéro de SIREN/SIRET",
+        "vat": "Numéro de TVA",
+        "phone": "Téléphone",
+        "email": "E-mail"
+      },
+      "hosting": {
+        "title": "Hébergeur du site",
+        "name": "Nom",
+        "address": "Adresse",
+        "website": "Site web"
+      },
+      "intellectualProperty": {
+        "title": "Propriété intellectuelle",
+        "body": "L'ensemble des contenus présents sur le site (textes, images, photographies, logos, icônes, vidéos, mise en page, code source, etc.) est, sauf mention contraire, la propriété exclusive de Claire Merlin, ou fait l'objet d'une autorisation d'utilisation par leurs auteurs ou ayants droit respectifs.\n\nToute reproduction, distribution, modification, adaptation, retransmission ou publication, même partielle, de ces différents éléments est strictement interdite sans l'accord écrit préalable de Claire Merlin, quel que soit le moyen ou le procédé utilisé.\n\nToute exploitation non autorisée du site ou de l'un quelconque des éléments qu'il contient sera considérée comme constitutive d'une contrefaçon et poursuivie conformément aux dispositions des articles L.335-2 et suivants du Code de Propriété Intellectuelle."
+      },
+      "personalData": {
+        "title": "Données personnelles",
+        "body": "Le site propose un formulaire de contact permettant aux visiteurs d'envoyer une demande par e-mail. Les informations collectées via ce formulaire (nom, adresse e-mail, message, et tout autre champ que vous proposez) sont utilisées uniquement dans le but de répondre à votre demande et ne sont ni cédées, ni vendues, ni transmises à des tiers.\n\nCes données sont conservées pendant une durée de 12 mois à compter de notre échange, puis supprimées.\n\nConformément au Règlement Général sur la Protection des Données (RGPD) et à la loi Informatique et Libertés, vous disposez d'un droit d'accès, de rectification, de suppression et d'opposition concernant vos données personnelles. Vous pouvez exercer ce droit en nous contactant à l'adresse suivante : clairemerlinpro@outlook.fr."
+      },
+      "cookies": {
+        "title": "Cookies",
+        "body": "Ce site n'utilise pas de cookies de tracking ou publicitaires. Seuls des cookies techniques strictement nécessaires au fonctionnement du site peuvent être déposés."
+      }
+    }
   }
 }

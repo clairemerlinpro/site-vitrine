@@ -5,7 +5,7 @@ import { Link, useLocation } from 'react-router-dom';
 import './HeaderMenu.css';
 import { LanguageSwitch } from '../Buttons/LanguageSwitch';
 import { useTranslation } from 'react-i18next';
-import { LogoDark } from '../Logo/LogoDark';
+import { Logo } from '../Logo/Logo';
 
 export function HeaderMenu() {
   // -------- Params --------
@@ -66,7 +66,9 @@ export function HeaderMenu() {
       px={{ base: 16, sm: 40 }}
       style={{ justifyContent: 'space-between', boxSizing: 'border-box' }}
     >
-      <LogoDark height={40} width={152} style={{ flexShrink: 1, maxWidth: 'calc(100% - 48px)' }} />
+      <Flex justify="flex-start" direction="row">
+        <Logo height={60} width="auto" />
+      </Flex>
       <Group gap={8} visibleFrom="sm">
         {items}
       </Group>
