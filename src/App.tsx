@@ -14,9 +14,9 @@ function App() {
   return (
     <MantineProvider theme={{ fontFamily: 'Montserrat, sans-serif' }}>
       <ScrollToTop />
-      <Flex direction="column" mih="100vh" bg="var(--color-background)">
+      <Flex direction="column" mih="100vh" w="100%" miw={0} bg="var(--color-background)">
         <HeaderMenu />
-        <Flex component="main" direction="column" flex={1}>
+        <Flex component="main" direction="column" flex={1} w="100%" miw={0}>
           <Routes>
             <Route path="*" element={<HomePage />} />
             <Route path="/portfolio" element={<PortfolioPage />} />

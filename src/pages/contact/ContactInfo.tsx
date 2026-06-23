@@ -86,7 +86,7 @@ export function ContactInfo() {
         />
       </Flex>
       <Divider mt="xl" color="var(--color-primary)" />
-      <Flex direction="row" gap="md" mt="xl">
+      <Flex direction={{ base: 'column', sm: 'row' }} gap="md" mt="xl" wrap="wrap">
         <SecondaryButton
           iconRight={<ArrowRightIcon className="button__arrow" size={14} />}
           label={t('contact.info.linkedin')}

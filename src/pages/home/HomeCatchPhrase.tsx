@@ -28,12 +28,13 @@ export function HomeCatchPhrase() {
   return (
     <Flex
       bg={'var(--color-background-section'}
-      pl={40}
-      pr={40}
-      pt={80}
-      pb={80}
+      px={{ base: 16, sm: 40 }}
+      py={{ base: 40, sm: 80 }}
       gap="md"
+      direction={{ base: 'column', md: 'row' }}
       align="center"
+      w="100%"
+      miw={0}
     >
       <Title order={2} c="var(--color-text)">
         {t('home.catchPhrase.titlePart1')}

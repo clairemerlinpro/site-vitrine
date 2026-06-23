@@ -31,14 +31,22 @@ export function HomeTechStack() {
   // -------- Main renderer --------
 
   return (
-    <Flex pl={40} pr={40} pt={80} pb={80} gap="md" direction="column">
+    <Flex
+      px={{ base: 16, sm: 40 }}
+      py={{ base: 40, sm: 80 }}
+      gap="md"
+      direction="column"
+      w="100%"
+      miw={0}
+      style={{ overflow: 'hidden' }}
+    >
       <Title order={2} c="var(--color-text)">
         {t('home.techStack.title')}
       </Title>
       <Carousel
         height={200}
         slideSize={{ base: '100%', xs: '60%', sm: '40%', md: '20%' }}
-        slideGap={{ base: 0, xs: 'md' }}
+        slideGap="md"
         emblaOptions={{ loop: true, align: 'start' }}
       >
         {techStacks.map((item) => (

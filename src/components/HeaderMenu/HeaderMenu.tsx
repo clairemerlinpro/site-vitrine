@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Burger, Divider, Drawer, Flex, Group, ScrollArea } from '@mantine/core';
+import { Burger, Divider, Drawer, Flex, Group } from '@mantine/core';
 import { useDisclosure, useWindowScroll } from '@mantine/hooks';
 import { Link, useLocation } from 'react-router-dom';
 import './HeaderMenu.css';
@@ -61,16 +61,20 @@ export function HeaderMenu() {
       align="center"
       bg="var(--color-grey)"
       h={80}
-      pl={40}
-      pr={40}
-      style={{ justifyContent: 'space-between' }}
+      w="100%"
+      miw={0}
+      px={{ base: 16, sm: 40 }}
+      style={{ justifyContent: 'space-between', boxSizing: 'border-box' }}
     >
-      <LogoDark width={200} height={200} />
+      <LogoDark height={40} width={152} style={{ flexShrink: 1, maxWidth: 'calc(100% - 48px)' }} />
       <Group gap={8} visibleFrom="sm">
         {items}
       </Group>
-      <LanguageSwitch />
+      <Group visibleFrom="sm">
+        <LanguageSwitch />
+      </Group>
       <Burger
+        color="var(--color-text)"
         opened={opened}
         onClick={toggle}
         hiddenFrom="sm"
@@ -81,16 +85,25 @@ export function HeaderMenu() {
       <Drawer
         opened={opened}
         onClose={close}
-        size="100%"
+        position="right"
+        size="lg"
         padding="md"
-        title="Navigation"
         hiddenFrom="sm"
         zIndex={1000000}
+        classNames={{ close: 'header-menu-drawer-close' }}
+        styles={{
+          content: { backgroundColor: 'var(--color-grey)' },
+          header: { backgroundColor: 'var(--color-grey)' },
+          body: { backgroundColor: 'var(--color-grey)' },
+        }}
       >
-        <ScrollArea h="calc(100vh - 80px)" mx="-md">
+        <Flex direction="column" p="md">
+          <Flex direction="row" justify="flex-end">
+            <LanguageSwitch />
+          </Flex>
           <Divider my="sm" />
           {items}
-        </ScrollArea>
+        </Flex>
       </Drawer>
     </Flex>
   );

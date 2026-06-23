@@ -42,14 +42,14 @@ export function HomePage() {
       <HomeTechStack />
       <HomeProjects />
       <Flex
-        pl={40}
-        pr={40}
-        pt={80}
-        pb={80}
+        px={{ base: 16, sm: 40 }}
+        py={{ base: 40, sm: 80 }}
         gap="md"
         direction="column"
         justify="center"
         align="center"
+        w="100%"
+        miw={0}
       >
         <Title c="var(--color-text)" order={1} fw={800} ta="center">
           {t('home.closingCta.title')}

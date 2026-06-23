@@ -94,8 +94,8 @@ export function AboutPage() {
   // -------- Main renderer --------
   return (
     <PageLayout padding={true} title={t('about.title')}>
-      <Flex direction="row" gap="xl" align="center">
-        <Flex direction="column" gap="md">
+      <Flex direction={{ base: 'column', sm: 'row' }} gap="xl" align={{ base: 'stretch', sm: 'center' }} miw={0}>
+        <Flex direction="column" gap="md" miw={0} flex={1}>
           <Text c="var(--color-text)">{t('about.description')}</Text>
           <Timeline active={1} bulletSize={24} lineWidth={2} mt="md">
             {companies.map((company) => (
@@ -143,7 +143,7 @@ export function AboutPage() {
         }
         labelPosition="left"
       />
-      <SimpleGrid cols={2} spacing="md" flex={1} miw={0}>
+      <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="md" flex={1} miw={0}>
         {formations.map((formation) => (
           <FormationCard key={formation.id} formation={formation} />
         ))}

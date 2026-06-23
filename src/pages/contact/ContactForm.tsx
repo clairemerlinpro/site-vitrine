@@ -96,7 +96,7 @@ export function ContactForm() {
           onSubmit={form.onSubmit(handleSubmit)}
           style={{ display: 'flex', flexDirection: 'column', flex: 1, width: '100%', minHeight: 0 }}
         >
-          <Flex direction="row" gap="md" mb="md">
+          <Flex direction={{ base: 'column', sm: 'row' }} gap="md" mb="md">
             <TextInput
               flex={1}
               c="var(--color-text)"
