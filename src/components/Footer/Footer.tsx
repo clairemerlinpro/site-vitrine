@@ -13,16 +13,18 @@ export function Footer() {
 
   return (
     <footer className="footer">
-      <Flex direction="column" bg="var(--color-grey)" pl={40} pr={40} pb={40} gap="md">
+      <Flex direction="column" bg="var(--color-grey)" px={{ base: 16, sm: 40 }} pb={40} gap="md" w="100%" miw={0}>
         <Flex
           direction="row"
           align="center"
           wrap="wrap"
           gap="md"
           h={80}
+          w="100%"
+          miw={0}
           style={{ justifyContent: 'space-between' }}
         >
-          <LogoDark width={200} />
+          <LogoDark height={40} width={152} style={{ flexShrink: 1, maxWidth: '100%' }} />
           <Group gap={8}>
             {links.map((item) => (
               <a

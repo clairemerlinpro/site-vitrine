@@ -35,18 +35,18 @@ export function HomeProjects() {
   return (
     <Flex
       bg={'var(--color-background-section'}
-      pl={40}
-      pr={40}
-      pt={80}
-      pb={80}
+      px={{ base: 16, sm: 40 }}
+      py={{ base: 40, sm: 80 }}
       gap="md"
       direction="column"
+      w="100%"
+      miw={0}
     >
       <Title order={2} c="var(--color-text)">
         {t('home.projects.title')}
       </Title>
 
-      <SimpleGrid cols={{ base: 2 }} spacing="md">
+      <SimpleGrid cols={{ base: 1, xs: 2 }} spacing="md">
         <ProjectCard key={projects[0].id} project={projects[0]} />
         <ProjectCard key={projects[1].id} project={projects[1]} />
       </SimpleGrid>

@@ -32,8 +32,16 @@ export function HomeAbout() {
 
   // -------- Main renderer --------
   return (
-    <Flex direction="row" gap="xl" align="center" pl={40} pr={40} pt={80} pb={80}>
-      <Flex direction="column" mt="md">
+    <Flex
+      direction={{ base: 'column', md: 'row' }}
+      gap="xl"
+      align="center"
+      px={{ base: 16, sm: 40 }}
+      py={{ base: 40, sm: 80 }}
+      w="100%"
+      miw={0}
+    >
+      <Flex direction="column" mt="md" miw={0} flex={1}>
         <Badge autoContrast color="var(--color-green)" leftSection={<CheckIcon />} mb="md">
           {t('home.about.badge')}
         </Badge>
@@ -44,7 +52,7 @@ export function HomeAbout() {
           {t('home.about.techStack')}
         </Title>
         <Text c="var(--color-text)">{t('home.about.description')}</Text>
-        <Flex direction="row" gap="md" mt="md">
+        <Flex direction={{ base: 'column', sm: 'row' }} gap="md" mt="md" wrap="wrap">
           <PrimaryButton
             iconRight={<ArrowRightIcon className="button__arrow" size={14} />}
             onClick={() => navigate('/portfolio')}

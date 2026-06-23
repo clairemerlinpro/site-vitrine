@@ -34,10 +34,11 @@ export function PageLayout({ children, padding, title }: PageLayoutProps) {
       bg="var(--color-background)"
       flex={1}
       direction="column"
-      pl={padding ? 40 : 0}
-      pr={padding ? 40 : 0}
-      pt={padding ? 80 : 0}
-      pb={padding ? 80 : 0}
+      w="100%"
+      miw={0}
+      px={padding ? { base: 16, sm: 40 } : 0}
+      pt={padding ? { base: 40, sm: 80 } : 0}
+      pb={padding ? { base: 40, sm: 80 } : 0}
     >
       {title && (
         <Title c="var(--color-text)" order={1} fw={800}>
