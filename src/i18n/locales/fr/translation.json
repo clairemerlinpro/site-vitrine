@@ -1,4 +1,7 @@
 {
+  "scrollToTop": {
+    "label": "Remonter en haut de la page"
+  },
   "headerMenu": {
     "home": "Accueil",
     "portfolio": "Réalisations",

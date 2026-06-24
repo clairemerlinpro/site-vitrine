@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.edea53f7.css",
-    "main.js": "/static/js/main.5f703369.js",
+    "main.css": "/static/css/main.f988b856.css",
+    "main.js": "/static/js/main.aded9899.js",
     "static/js/453.25d94532.chunk.js": "/static/js/453.25d94532.chunk.js",
     "static/media/Lumieres.png": "/static/media/Lumieres.793c022b8f7fed274473.png",
     "static/media/Auchan.png": "/static/media/Auchan.80ad485d15e507f7637a.png",
@@ -11,6 +11,8 @@
     "static/media/photo.jpg": "/static/media/photo.52c42068694aae9dcf3a.jpg",
     "static/media/MotoXP.png": "/static/media/MotoXP.3d6b2deff50953d8de7b.png",
     "static/media/RunningCare.png": "/static/media/RunningCare.4dadaa170d4697c95e51.png",
+    "static/media/CVFR.pdf": "/static/media/CVFR.bd8ba18d34f3c2213a34.pdf",
+    "static/media/CVEN.pdf": "/static/media/CVEN.d2403bd8d83587fa508a.pdf",
     "static/media/Angelo.JPG": "/static/media/Angelo.e0b649215561cf1c9f98.JPG",
     "static/media/CurryCulum.JPG": "/static/media/CurryCulum.490ea42a9a4eb5df9fd0.JPG",
     "static/media/LeBonHome.jpg": "/static/media/LeBonHome.d7469dec84c50d8018f1.jpg",
@@ -26,16 +28,14 @@
     "static/media/golang.svg": "/static/media/golang.bdb19ee86fae51fd099ec6ad73f1c26a.svg",
     "static/media/tailwind.svg": "/static/media/tailwind.e818a1f4a8e309869eef6a513008cfd4.svg",
     "static/media/accessibility.svg": "/static/media/accessibility.89f504392b49e914ece442f604ec3a42.svg",
-    "static/media/logo-white-text.svg": "/static/media/logo-white-text.b7ed3f87f1898fdefd635b058ab0eb3b.svg",
-    "static/media/expo.svg": "/static/media/expo.119f125b134106b6abf20a5e4db1b92b.svg",
     "index.html": "/index.html",
-    "static/media/logo-icon-only.svg": "/static/media/logo-icon-only.8bc1c472e867125bb45c06d5aab18f46.svg",
-    "main.edea53f7.css.map": "/static/css/main.edea53f7.css.map",
-    "main.5f703369.js.map": "/static/js/main.5f703369.js.map",
+    "static/media/expo.svg": "/static/media/expo.119f125b134106b6abf20a5e4db1b92b.svg",
+    "main.f988b856.css.map": "/static/css/main.f988b856.css.map",
+    "main.aded9899.js.map": "/static/js/main.aded9899.js.map",
     "453.25d94532.chunk.js.map": "/static/js/453.25d94532.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.edea53f7.css",
-    "static/js/main.5f703369.js"
+    "static/css/main.f988b856.css",
+    "static/js/main.aded9899.js"
   ]
 }
