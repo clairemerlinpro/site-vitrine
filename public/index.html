@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/icon-dark.svg" type="image/svg+xml" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#222220" />
     <meta name="description" content="Web site created using create-react-app" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/icon-dark.svg" />
     <!--
@@ -22,6 +22,13 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>CLAIRE MERLIN - Freelance Web & Mobile Dev</title>
+    <script>
+      (function () {
+        var theme = localStorage.getItem('color-theme');
+        if (theme !== 'light' && theme !== 'dark') theme = 'dark';
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

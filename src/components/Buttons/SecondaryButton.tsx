@@ -1,6 +1,7 @@
 import { Button, Text } from '@mantine/core';
 import React from 'react';
 import './Buttons.css';
+import { useTheme } from '../../context/ThemeContext';
 
 interface SecondaryButtonProps {
   onClick: () => void;
@@ -20,6 +21,7 @@ export function SecondaryButton({
   loading,
 }: SecondaryButtonProps) {
   // -------- Params --------
+  const { theme } = useTheme();
 
   // -------- Store --------
 
@@ -46,7 +48,7 @@ export function SecondaryButton({
     <Button
       className="button"
       variant="default"
-      bg="transparent"
+      bg={theme === 'dark' ? 'transparent' : 'var(--color-white)'}
       onClick={onClick}
       c="var(--color-text)"
       rightSection={iconRight}

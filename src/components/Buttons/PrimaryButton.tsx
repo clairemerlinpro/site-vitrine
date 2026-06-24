@@ -58,7 +58,7 @@ export function PrimaryButton({
       variant="light"
       rightSection={iconRight}
       leftSection={iconLeft}
-      c="var(--color-text)"
+      c="var(--color-white)"
       bg={bg ?? 'var(--color-primary)'}
       onClick={onClick}
       disabled={isInactive}

@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.f988b856.css",
-    "main.js": "/static/js/main.aded9899.js",
+    "main.css": "/static/css/main.c9ff0ff9.css",
+    "main.js": "/static/js/main.596d576a.js",
     "static/js/453.25d94532.chunk.js": "/static/js/453.25d94532.chunk.js",
     "static/media/Lumieres.png": "/static/media/Lumieres.793c022b8f7fed274473.png",
     "static/media/Auchan.png": "/static/media/Auchan.80ad485d15e507f7637a.png",
@@ -30,12 +30,12 @@
     "static/media/accessibility.svg": "/static/media/accessibility.89f504392b49e914ece442f604ec3a42.svg",
     "index.html": "/index.html",
     "static/media/expo.svg": "/static/media/expo.119f125b134106b6abf20a5e4db1b92b.svg",
-    "main.f988b856.css.map": "/static/css/main.f988b856.css.map",
-    "main.aded9899.js.map": "/static/js/main.aded9899.js.map",
+    "main.c9ff0ff9.css.map": "/static/css/main.c9ff0ff9.css.map",
+    "main.596d576a.js.map": "/static/js/main.596d576a.js.map",
     "453.25d94532.chunk.js.map": "/static/js/453.25d94532.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f988b856.css",
-    "static/js/main.aded9899.js"
+    "static/css/main.c9ff0ff9.css",
+    "static/js/main.596d576a.js"
   ]
 }

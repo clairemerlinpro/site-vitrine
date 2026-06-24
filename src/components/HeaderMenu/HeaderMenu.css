@@ -40,7 +40,7 @@
 
 .link[data-active] {
   background-color: var(--color-primary);
-  color: var(--color-text);
+  color: var(--color-white);
 }
 
 .header-menu-drawer-close {
