@@ -140,7 +140,7 @@ export function ContactForm() {
             label={t('contact.form.submit')}
             loading={isSubmitting}
             disabled={isSubmitting || !isFormComplete}
-            iconRight={<PaperPlaneRightIcon className="button__arrow" size={14} />}
+            iconRight={<PaperPlaneRightIcon className="button_icon" size={14} />}
           />
         </form>
       )}

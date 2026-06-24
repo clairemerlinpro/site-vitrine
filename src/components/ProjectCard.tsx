@@ -63,7 +63,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         {project.url && (
           <Flex justify="flex-start" mt="md">
             <PrimaryButton
-              iconRight={<ArrowRightIcon className="button__arrow" size={14} />}
+              iconRight={<ArrowRightIcon className="button_icon" size={14} />}
               onClick={() => window.open(project.url, '_blank')}
               label={t('projectCard.viewProject')}
             />

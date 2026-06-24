@@ -6,6 +6,7 @@ import { PrimaryButton } from '../../components/Buttons/PrimaryButton';
 import { SecondaryButton } from '../../components/Buttons/SecondaryButton';
 import { ProfilePicture } from '../../components/ProfilePicture';
 import { useTranslation } from 'react-i18next';
+import { ResumeButton } from '../../components/Buttons/ResumeButton';
 
 export function HomeAbout() {
   // -------- Params --------
@@ -52,17 +53,24 @@ export function HomeAbout() {
           {t('home.about.techStack')}
         </Title>
         <Text c="var(--color-text)">{t('home.about.description')}</Text>
-        <Flex direction={{ base: 'column', sm: 'row' }} gap="md" mt="md" wrap="wrap">
+        <Flex
+          direction={{ base: 'column', sm: 'row' }}
+          gap="md"
+          mt="md"
+          wrap="wrap"
+          align="flex-start"
+        >
           <PrimaryButton
-            iconRight={<ArrowRightIcon className="button__arrow" size={14} />}
+            iconRight={<ArrowRightIcon className="button_icon" size={14} />}
             onClick={() => navigate('/portfolio')}
             label={t('home.about.primaryCta')}
           />
           <SecondaryButton
             onClick={() => navigate('/contact')}
             label={t('home.about.secondaryCta')}
-            iconRight={<ArrowRightIcon className="button__arrow" size={14} />}
+            iconRight={<ArrowRightIcon className="button_icon" size={14} />}
           />
+          <ResumeButton />
         </Flex>
       </Flex>
       <ProfilePicture />

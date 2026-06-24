@@ -20,17 +20,17 @@
   box-shadow: none;
 }
 
-.button__arrow {
+.button_icon {
   transition: transform 0.25s ease;
 }
 
-.button:hover:not(:disabled):not([data-disabled]) .button__arrow {
+.button:hover:not(:disabled):not([data-disabled]) .button_icon {
   transform: translateX(4px);
 }
 
 @media (prefers-reduced-motion: reduce) {
   .button,
-  .button__arrow {
+  .button_icon {
     transition: none;
   }
 
@@ -38,7 +38,7 @@
     transform: none;
   }
 
-  .button:hover:not(:disabled):not([data-disabled]) .button__arrow {
+  .button:hover:not(:disabled):not([data-disabled]) .button_icon {
     transform: none;
   }
 }

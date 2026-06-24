@@ -55,7 +55,7 @@ export function HomeProjects() {
         <PrimaryButton
           onClick={() => navigate('/portfolio')}
           label={t('home.projects.cta')}
-          iconRight={<ArrowRightIcon className="button__arrow" size={14} />}
+          iconRight={<ArrowRightIcon className="button_icon" size={14} />}
         />
       </Flex>
     </Flex>
