@@ -12,6 +12,7 @@ interface PrimaryButtonProps {
   url?: string;
   disabled?: boolean;
   loading?: boolean;
+  bg?: string;
 }
 
 export function PrimaryButton({
@@ -24,6 +25,7 @@ export function PrimaryButton({
   iconLeft,
   disabled,
   loading,
+  bg,
 }: PrimaryButtonProps) {
   // -------- Params --------
 
@@ -57,7 +59,7 @@ export function PrimaryButton({
       rightSection={iconRight}
       leftSection={iconLeft}
       c="var(--color-text)"
-      bg="var(--color-primary)"
+      bg={bg ?? 'var(--color-primary)'}
       onClick={onClick}
       disabled={isInactive}
       loading={loading}

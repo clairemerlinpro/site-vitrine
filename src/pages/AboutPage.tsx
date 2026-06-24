@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, Title, Text, Divider, SimpleGrid, Paper, Badge, Timeline } from '@mantine/core';
+import { Flex, Title, Text, Divider, SimpleGrid, Paper, Badge, Timeline, Box } from '@mantine/core';
 import { ProfilePicture } from '../components/ProfilePicture';
 import {
   AI_TOOLS,
@@ -14,6 +14,7 @@ import { Formation, FORMATIONS_EN, FORMATIONS_FR } from '../context/FORMATIONS';
 import { COMPANIES_EN, COMPANIES_FR, Company } from '../context/PROJECTS';
 import { PageLayout } from '../components/PageLayout';
 import { useTranslation } from 'react-i18next';
+import { ResumeButton } from '../components/Buttons/ResumeButton';
 
 export function AboutPage() {
   // -------- Params --------
@@ -94,7 +95,12 @@ export function AboutPage() {
   // -------- Main renderer --------
   return (
     <PageLayout padding={true} title={t('about.title')}>
-      <Flex direction={{ base: 'column', sm: 'row' }} gap="xl" align={{ base: 'stretch', sm: 'center' }} miw={0}>
+      <Flex
+        direction={{ base: 'column', sm: 'row' }}
+        gap="xl"
+        align={{ base: 'stretch', sm: 'center' }}
+        miw={0}
+      >
         <Flex direction="column" gap="md" miw={0} flex={1}>
           <Text c="var(--color-text)">{t('about.description')}</Text>
           <Timeline active={1} bulletSize={24} lineWidth={2} mt="md">
@@ -143,11 +149,14 @@ export function AboutPage() {
         }
         labelPosition="left"
       />
-      <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="md" flex={1} miw={0}>
+      <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="md" flex={1} miw={0} mb="xl">
         {formations.map((formation) => (
           <FormationCard key={formation.id} formation={formation} />
         ))}
       </SimpleGrid>
+      <Box w="fit-content" mt="xl">
+        <ResumeButton />
+      </Box>
     </PageLayout>
   );
 }

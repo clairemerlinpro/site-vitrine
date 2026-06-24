@@ -1,4 +1,4 @@
-import { Paper, Title, Divider } from '@mantine/core';
+import { Paper, Title, Divider, Box } from '@mantine/core';
 import { Flex } from '@mantine/core';
 import { EnvelopeSimpleIcon, MapPinIcon, PhoneIcon } from '@phosphor-icons/react/dist/ssr';
 import { CONTACT_EMAIL } from './ContactPage';
@@ -6,6 +6,7 @@ import { SecondaryButton } from '../../components/Buttons/SecondaryButton';
 import { ArrowRightIcon } from '@phosphor-icons/react';
 import { useTranslation } from 'react-i18next';
 import { InfoItem } from '../../components/InfoItem';
+import { ResumeButton } from '../../components/Buttons/ResumeButton';
 
 export function ContactInfo() {
   // -------- Params --------
@@ -60,18 +61,21 @@ export function ContactInfo() {
       <Divider mt="xl" color="var(--color-primary)" />
       <Flex direction={{ base: 'column', sm: 'row' }} gap="md" mt="xl" wrap="wrap">
         <SecondaryButton
-          iconRight={<ArrowRightIcon className="button__arrow" size={14} />}
+          iconRight={<ArrowRightIcon className="button_icon" size={14} />}
           label={t('contact.info.linkedin')}
           onClick={() =>
             window.open('https://www.linkedin.com/in/claire-merlin-062241143/', '_blank')
           }
         />
         <SecondaryButton
-          iconRight={<ArrowRightIcon className="button__arrow" size={14} />}
+          iconRight={<ArrowRightIcon className="button_icon" size={14} />}
           label={t('contact.info.github')}
           onClick={() => window.open('https://github.com/clairemerlinpro', '_blank')}
         />
       </Flex>
+      <Box w="fit-content" my="md">
+        <ResumeButton />
+      </Box>
     </Paper>
   );
 }

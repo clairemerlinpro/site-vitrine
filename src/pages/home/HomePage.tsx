@@ -60,7 +60,7 @@ export function HomePage() {
         <SecondaryButton
           onClick={() => navigate('/contact')}
           label={t('home.closingCta.cta')}
-          iconRight={<ArrowRightIcon className="button__arrow" size={14} />}
+          iconRight={<ArrowRightIcon className="button_icon" size={14} />}
         />
       </Flex>
     </PageLayout>
