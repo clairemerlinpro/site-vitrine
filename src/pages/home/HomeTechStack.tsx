@@ -1,9 +1,12 @@
 import { Flex, Title } from '@mantine/core';
-import React from 'react';
 import { Carousel } from '@mantine/carousel';
+import type { EmblaCarouselType } from 'embla-carousel';
+import { useEffect, useState } from 'react';
 import { TECHSTACKS_EN, TECHSTACKS_FR } from '../../context/TECHSTACKS';
 import { TechStackCard } from '../../components/TechStackCard';
 import { useTranslation } from 'react-i18next';
+
+const AUTOPLAY_DELAY_MS = 2000;
 
 export function HomeTechStack() {
   // -------- Params --------
@@ -15,6 +18,18 @@ export function HomeTechStack() {
 
   // -------- Init --------
   const techStacks = i18n.language === 'fr' ? TECHSTACKS_FR : TECHSTACKS_EN;
+  const [embla, setEmbla] = useState<EmblaCarouselType | null>(null);
+
+  useEffect(() => {
+    if (!embla) return;
+
+    const interval = window.setInterval(() => {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      embla.scrollNext();
+    }, AUTOPLAY_DELAY_MS);
+
+    return () => window.clearInterval(interval);
+  }, [embla]);
 
   // -------- Helpers --------
 
@@ -47,6 +62,7 @@ export function HomeTechStack() {
         height={200}
         slideSize={{ base: '100%', xs: '60%', sm: '40%', md: '20%' }}
         slideGap="md"
+        getEmblaApi={setEmbla}
         emblaOptions={{ loop: true, align: 'start' }}
       >
         {techStacks.map((item) => (

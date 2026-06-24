@@ -1,4 +1,7 @@
 {
+  "scrollToTop": {
+    "label": "Scroll to top"
+  },
   "headerMenu": {
     "home": "Home",
     "portfolio": "Achievements",
