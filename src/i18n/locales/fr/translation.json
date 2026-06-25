@@ -17,7 +17,7 @@
   },
   "footer": {
     "ariaLabel": "Pied de page",
-    "navigationLabel": "Navigation"
+    "navigationLabel": "Liens vers mes réseaux sociaux et mentions légales"
   },
   "home": {
     "about": {
@@ -40,7 +40,13 @@
       "ariaLabel": "Présentation"
     },
     "techStack": {
-      "title": "Compétences techniques"
+      "title": "Compétences techniques",
+      "carouselLabel": "Liste des compétences techniques",
+      "slideLabel": "{{name}}, {{current}} sur {{total}}",
+      "previous": "Compétence précédente",
+      "next": "Compétence suivante",
+      "pauseAutoplay": "Mettre en pause le défilement automatique",
+      "playAutoplay": "Reprendre le défilement automatique"
     },
     "projects": {
       "title": "Réalisations",
@@ -90,24 +96,33 @@
       "phone": "Téléphone",
       "location": "Localisation",
       "linkedin": "Voir mon LinkedIn",
-      "github": "Voir mon GitHub"
+      "github": "Voir mon GitHub",
+      "buttons": "Liens vers mes réseaux sociaux"
     },
     "form": {
+      "requiredFields": {
+        "label1": "Les champs marqués d'un",
+        "label2": "sont obligatoires",
+        "asterisk": "*"
+      },
       "fields": {
         "name": {
           "label": "Nom",
           "placeholder": "John Doe",
-          "error": "Le nom est requis"
+          "error": "Le nom est requis",
+          "description": "Le nom est requis : exemple 'John Doe'"
         },
         "email": {
           "label": "Email",
           "placeholder": "votre@email.com",
-          "error": "Email invalide"
+          "error": "Email invalide",
+          "description": "L'email est requis : exemple 'votre@email.com'"
         },
         "message": {
           "label": "Message",
           "placeholder": "Votre message",
-          "error": "Le message est requis"
+          "error": "Le message est requis",
+          "description": "Le message est requis : exemple 'Bonjour, je souhaite discuter de mon projet...'"
         }
       },
       "submit": "Envoyer",

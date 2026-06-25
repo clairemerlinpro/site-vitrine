@@ -17,7 +17,7 @@
   },
   "footer": {
     "ariaLabel": "Footer",
-    "navigationLabel": "Navigation"
+    "navigationLabel": "Links to my social media and legal notice"
   },
   "home": {
     "about": {
@@ -40,7 +40,13 @@
       "ariaLabel": "Presentation"
     },
     "techStack": {
-      "title": "Technical skills"
+      "title": "Technical skills",
+      "carouselLabel": "Technical skills list",
+      "slideLabel": "{{name}}, {{current}} of {{total}}",
+      "previous": "Previous skill",
+      "next": "Next skill",
+      "pauseAutoplay": "Pause automatic scrolling",
+      "playAutoplay": "Resume automatic scrolling"
     },
     "projects": {
       "title": "Achievements",
@@ -93,21 +99,29 @@
       "github": "View my GitHub"
     },
     "form": {
+      "requiredFields": {
+        "label1": "The fields marked with an",
+        "label2": "are required",
+        "asterisk": "*"
+      },
       "fields": {
         "name": {
           "label": "Name",
           "placeholder": "John Doe",
-          "error": "Name is required"
+          "error": "Name is required",
+          "description": "Name is required: example 'John Doe'"
         },
         "email": {
           "label": "Email",
           "placeholder": "your@email.com",
-          "error": "Invalid Email"
+          "error": "Invalid Email",
+          "description": "Email is required: example 'your@email.com'"
         },
         "message": {
           "label": "Message",
           "placeholder": "Your message",
-          "error": "Message is required"
+          "error": "Message is required",
+          "description": "Message is required: example 'Hello, I would like to discuss my project...'"
         }
       },
       "submit": "Submit",

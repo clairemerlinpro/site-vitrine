@@ -1,4 +1,4 @@
-import { Flex, Paper, TextInput, Textarea, Alert } from '@mantine/core';
+import { Flex, Paper, TextInput, Textarea, Alert, Text } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { useState } from 'react';
 import { ContactFormValues } from '../../services/contactForm';
@@ -81,6 +81,7 @@ export function ContactForm() {
     >
       {submitFeedback ? (
         <Alert
+          role="alert"
           mb="md"
           color={submitFeedback.type === 'success' ? 'green' : 'red'}
           title={
@@ -96,16 +97,29 @@ export function ContactForm() {
           onSubmit={form.onSubmit(handleSubmit)}
           style={{ display: 'flex', flexDirection: 'column', flex: 1, width: '100%', minHeight: 0 }}
         >
+          <Text c="var(--color-text)" mb="md">
+            {t('contact.form.requiredFields.label1')}
+            <Text span fw={600} c="red">
+              {t('contact.form.requiredFields.asterisk')}
+            </Text>{' '}
+            {t('contact.form.requiredFields.label2')}
+          </Text>
           <Flex direction={{ base: 'column', sm: 'row' }} gap="md" mb="md">
             <TextInput
+              autoComplete="name"
+              description={t('contact.form.fields.name.description')}
               flex={1}
               c="var(--color-text)"
               withAsterisk
+              size="md"
               label={t('contact.form.fields.name.label')}
               placeholder={t('contact.form.fields.name.placeholder')}
               {...form.getInputProps('name')}
             />
             <TextInput
+              autoComplete="email"
+              description={t('contact.form.fields.email.description')}
+              size="md"
               flex={1}
               c="var(--color-text)"
               withAsterisk
@@ -115,7 +129,9 @@ export function ContactForm() {
             />
           </Flex>
           <Textarea
+            description={t('contact.form.fields.message.description')}
             flex={1}
+            size="md"
             mb="md"
             c="var(--color-text)"
             withAsterisk

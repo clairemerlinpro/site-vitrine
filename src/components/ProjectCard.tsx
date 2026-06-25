@@ -6,10 +6,12 @@ import { PrimaryButton } from './Buttons/PrimaryButton';
 import { useTranslation } from 'react-i18next';
 
 interface ProjectCardProps {
+  role?: string;
+  ariaLabel?: string;
   project: Project;
 }
 
-export function ProjectCard({ project }: ProjectCardProps) {
+export function ProjectCard({ project, role, ariaLabel }: ProjectCardProps) {
   // -------- Params --------
   const { t } = useTranslation();
 
@@ -33,10 +35,18 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
   // -------- Main renderer --------
   return (
-    <Card shadow="sm" padding="lg" bg="var(--color-grey)" key={project.id} w="100%">
+    <Card
+      shadow="sm"
+      padding="lg"
+      bg="var(--color-grey)"
+      key={project.id}
+      w="100%"
+      role={role}
+      aria-label={ariaLabel}
+    >
       {project.image && (
         <Card.Section bg="white">
-          <Image fit="contain" src={project.image} height={200} />
+          <Image fit="contain" src={project.image} height={200} aria-hidden="true" />
         </Card.Section>
       )}
 
@@ -53,7 +63,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       </Flex>
       <Flex direction="column" justify="space-between" flex={1}>
         <div>
-          <Title order={2} c="var(--color-text)">
+          <Title order={2} c="var(--color-text)" role="text">
             {project.name}
           </Title>
           <Text c="var(--color-text)" style={{ whiteSpace: 'pre-line' }}>

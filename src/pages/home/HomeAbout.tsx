@@ -48,10 +48,10 @@ export function HomeAbout() {
         <Badge autoContrast color="var(--color-green)" leftSection={<CheckIcon />} mb="md">
           {t('home.about.badge')}
         </Badge>
-        <Title c="var(--color-text)" order={1} fw={800}>
+        <Title c="var(--color-text)" order={1} fw={800} role="heading" aria-level={1}>
           {t('home.about.title')}
         </Title>
-        <Title c="var(--color-text)" order={2}>
+        <Title c="var(--color-text)" order={2} role="text">
           {t('home.about.techStack')}
         </Title>
         <Text c="var(--color-text)">{t('home.about.description')}</Text>

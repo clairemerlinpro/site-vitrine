@@ -31,6 +31,7 @@ export function ProfilePicture() {
         w={400}
         h={400}
         src={require('../assets/photo.jpg')}
+        aria-hidden="true"
       />
       <Paper
         p="md"

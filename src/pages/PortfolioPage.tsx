@@ -2,7 +2,7 @@ import { Text, SimpleGrid } from '@mantine/core';
 import React from 'react';
 import { ProjectCard } from '../components/ProjectCard';
 import { PROJECTS_EN, PROJECTS_FR } from '../context/PROJECTS';
-import { PageLayout } from '../components/PageLayout';
+import { PageLayout } from '../components/PageLayout/PageLayout';
 import { useTranslation } from 'react-i18next';
 
 export function PortfolioPage() {
@@ -32,9 +32,20 @@ export function PortfolioPage() {
   return (
     <PageLayout padding={true} title={t('portfolio.title')}>
       <Text c="var(--color-text)">{t('portfolio.description')}</Text>
-      <SimpleGrid cols={{ base: 1, xs: 1, sm: 2, md: 3 }} spacing="md" mt="xl">
+      <SimpleGrid
+        cols={{ base: 1, xs: 1, sm: 2, md: 3 }}
+        spacing="md"
+        mt="xl"
+        role="list"
+        aria-label={t('portfolio.title')}
+      >
         {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
+          <ProjectCard
+            key={project.id}
+            project={project}
+            role="listitem"
+            aria-label={project.name}
+          />
         ))}
       </SimpleGrid>
     </PageLayout>

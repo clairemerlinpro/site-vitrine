@@ -53,13 +53,20 @@ export function ContactInfo() {
       <Title order={2} c="var(--color-text)">
         {t('contact.info.title')}
       </Title>
-      <Flex direction="column" gap="md" mt="md">
+      <Flex direction="column" gap="md" mt="md" role="list" aria-label={t('contact.info.title')}>
         {infoItems.map((item) => (
-          <InfoItem key={item.title} {...item} />
+          <InfoItem key={item.title} {...item} role="listitem" aria-label={item.title} />
         ))}
       </Flex>
       <Divider mt="xl" color="var(--color-primary)" />
-      <Flex direction={{ base: 'column', sm: 'row' }} gap="md" mt="xl" wrap="wrap">
+      <Flex
+        direction={{ base: 'column', sm: 'row' }}
+        gap="md"
+        mt="xl"
+        wrap="wrap"
+        role="list"
+        aria-label={t('contact.info.buttons')}
+      >
         <SecondaryButton
           iconRight={<ArrowRightIcon className="button_icon" size={14} />}
           label={t('contact.info.linkedin')}
