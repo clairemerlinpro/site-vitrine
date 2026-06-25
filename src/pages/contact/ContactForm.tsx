@@ -151,6 +151,7 @@ export function ContactForm() {
             }}
           />
           <PrimaryButton
+            ariaLabel={t('contact.form.submit')}
             large={true}
             type="submit"
             label={t('contact.form.submit')}

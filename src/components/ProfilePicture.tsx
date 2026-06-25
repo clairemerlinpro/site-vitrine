@@ -26,6 +26,7 @@ export function ProfilePicture() {
   return (
     <Box pos="relative" visibleFrom="sm" w={400} mb={24}>
       <Image
+        role="img"
         className="light-shadow"
         radius="md"
         w={400}

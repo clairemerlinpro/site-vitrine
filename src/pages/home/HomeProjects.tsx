@@ -70,6 +70,7 @@ export function HomeProjects() {
 
       <Flex justify="center" mt="xl">
         <PrimaryButton
+          ariaLabel={t('home.projects.cta')}
           onClick={() => navigate('/portfolio')}
           label={t('home.projects.cta')}
           iconRight={<ArrowRightIcon className="button_icon" size={14} />}

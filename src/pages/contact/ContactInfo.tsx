@@ -68,6 +68,7 @@ export function ContactInfo() {
         aria-label={t('contact.info.buttons')}
       >
         <SecondaryButton
+          ariaLabel={t('contact.info.linkedin')}
           iconRight={<ArrowRightIcon className="button_icon" size={14} />}
           label={t('contact.info.linkedin')}
           onClick={() =>
@@ -75,6 +76,7 @@ export function ContactInfo() {
           }
         />
         <SecondaryButton
+          ariaLabel={t('contact.info.github')}
           iconRight={<ArrowRightIcon className="button_icon" size={14} />}
           label={t('contact.info.github')}
           onClick={() => window.open('https://github.com/clairemerlinpro', '_blank')}

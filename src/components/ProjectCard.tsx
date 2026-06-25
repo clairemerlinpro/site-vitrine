@@ -46,7 +46,7 @@ export function ProjectCard({ project, role, ariaLabel }: ProjectCardProps) {
     >
       {project.image && (
         <Card.Section bg="white">
-          <Image fit="contain" src={project.image} height={200} aria-hidden="true" />
+          <Image role="img" fit="contain" src={project.image} height={200} aria-hidden="true" />
         </Card.Section>
       )}
 
@@ -73,6 +73,7 @@ export function ProjectCard({ project, role, ariaLabel }: ProjectCardProps) {
         {project.url && (
           <Flex justify="flex-start" mt="md">
             <PrimaryButton
+              ariaLabel={`${t('projectCard.viewProject')} ${project.name}`}
               iconRight={<ArrowRightIcon className="button_icon" size={14} />}
               onClick={() => window.open(project.url, '_blank')}
               label={t('projectCard.viewProject')}

@@ -33,7 +33,15 @@ export function TechStackCard({ tech, titleId, role, ariaLabel }: TechStackCardP
   return (
     <Paper bg={'var(--color-grey)'} role={role} aria-label={ariaLabel}>
       <Flex direction={'column'} justify={'center'} align="center" p="md" h="200" gap="md">
-        <Image radius="md" w={100} h={100} src={tech.icon} fit="contain" aria-hidden="true" />
+        <Image
+          role="img"
+          radius="md"
+          w={100}
+          h={100}
+          src={tech.icon}
+          fit="contain"
+          aria-hidden="true"
+        />
         <Text id={titleId} fw={600} c="var(--color-text)" ta="center">
           {tech.name}
         </Text>

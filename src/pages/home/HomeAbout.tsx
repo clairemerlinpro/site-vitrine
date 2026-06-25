@@ -63,11 +63,13 @@ export function HomeAbout() {
           align="flex-start"
         >
           <PrimaryButton
+            ariaLabel={t('home.about.primaryCta')}
             iconRight={<ArrowRightIcon className="button_icon" size={14} />}
             onClick={() => navigate('/portfolio')}
             label={t('home.about.primaryCta')}
           />
           <SecondaryButton
+            ariaLabel={t('home.about.secondaryCta')}
             onClick={() => navigate('/contact')}
             label={t('home.about.secondaryCta')}
             iconRight={<ArrowRightIcon className="button_icon" size={14} />}

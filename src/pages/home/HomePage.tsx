@@ -60,6 +60,7 @@ export function HomePage() {
           {t('home.contact.description')}
         </Text>
         <SecondaryButton
+          ariaLabel={t('home.contact.cta')}
           onClick={() => navigate('/contact')}
           label={t('home.contact.cta')}
           iconRight={<ArrowRightIcon className="button_icon" size={14} />}

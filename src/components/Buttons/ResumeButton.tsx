@@ -37,6 +37,7 @@ export function ResumeButton() {
   // -------- Main renderer --------
   return (
     <PrimaryButton
+      ariaLabel={t('home.about.downloadResume')}
       bg="var(--color-green)"
       iconRight={<DownloadSimpleIcon className="button_icon" size={14} />}
       onClick={handleDownloadResume}

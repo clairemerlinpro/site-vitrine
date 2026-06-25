@@ -13,6 +13,7 @@ interface PrimaryButtonProps {
   disabled?: boolean;
   loading?: boolean;
   bg?: string;
+  ariaLabel: string;
 }
 
 export function PrimaryButton({
@@ -26,6 +27,7 @@ export function PrimaryButton({
   disabled,
   loading,
   bg,
+  ariaLabel,
 }: PrimaryButtonProps) {
   // -------- Params --------
 
@@ -52,6 +54,8 @@ export function PrimaryButton({
 
   return (
     <Button
+      role="button"
+      aria-label={ariaLabel}
       type={type ?? 'button'}
       w={large ? '100%' : 'auto'}
       className="button"

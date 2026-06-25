@@ -13,7 +13,10 @@
     "portfolio": "Achievements",
     "about": "About",
     "contact": "Contact",
-    "ariaLabel": "Main menu"
+    "ariaLabel": "Main menu",
+    "languageSwitch": "Basculer vers le français",
+    "themeSwitchtoDark": "Switch to dark mode",
+    "themeSwitchtoLight": "Switch to light mode"
   },
   "footer": {
     "ariaLabel": "Footer",
