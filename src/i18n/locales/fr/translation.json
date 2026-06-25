@@ -1,4 +1,7 @@
 {
+  "themeSwitch": {
+    "label": "Basculer entre le mode clair et le mode sombre"
+  },
   "scrollToTop": {
     "label": "Remonter en haut de la page"
   },

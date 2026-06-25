@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
 
-:root {
+:root,
+[data-theme='dark'] {
+  color-scheme: dark;
   --color-background: #222220;
   --color-background-section: #0b0b0a;
   --color-primary: #8c6445;
@@ -9,6 +11,22 @@
   --color-text: #f7f2ee;
   --color-grey: #3c3c39;
   --color-green: #4a8c45;
+  --color-logo-icon-bg: #222220;
+  --color-white: #ffffff;
+}
+
+[data-theme='light'] {
+  color-scheme: light;
+  --color-background: #f7f2ee;
+  --color-background-section: #ede8e3;
+  --color-primary: #8c6445;
+  --color-secondary: #bb9476;
+  --color-secondary-light: #d4b89e;
+  --color-text: #222220;
+  --color-grey: #e7dacf;
+  --color-green: #3d7339;
+  --color-logo-icon-bg: #222220;
+  --color-white: #ffffff;
 }
 
 body {
@@ -18,6 +36,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: clip;
   background-color: var(--color-background);
+  color: var(--color-text);
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
 }
 
 html,
@@ -33,4 +55,10 @@ code {
 .light-shadow {
   box-shadow: 0 4px 12px color-mix(in srgb, var(--color-text) 45%, transparent) !important;
   transition: box-shadow 0.25s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    transition: none;
+  }
 }

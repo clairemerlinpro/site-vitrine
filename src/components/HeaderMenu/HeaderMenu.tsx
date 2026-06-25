@@ -4,6 +4,7 @@ import { useDisclosure, useWindowScroll } from '@mantine/hooks';
 import { Link, useLocation } from 'react-router-dom';
 import './HeaderMenu.css';
 import { LanguageSwitch } from '../Buttons/LanguageSwitch';
+import { ThemeSwitch } from '../Buttons/ThemeSwitch';
 import { useTranslation } from 'react-i18next';
 import { Logo } from '../Logo/Logo';
 
@@ -72,14 +73,15 @@ export function HeaderMenu() {
       <Group gap={8} visibleFrom="sm">
         {items}
       </Group>
-      <Group visibleFrom="sm">
+      <Group visibleFrom="md">
+        <ThemeSwitch />
         <LanguageSwitch />
       </Group>
       <Burger
         color="var(--color-text)"
         opened={opened}
         onClick={toggle}
-        hiddenFrom="sm"
+        hiddenFrom="md"
         size="sm"
         aria-label="Toggle navigation"
       />
@@ -90,7 +92,7 @@ export function HeaderMenu() {
         position="right"
         size="lg"
         padding="md"
-        hiddenFrom="sm"
+        hiddenFrom="md"
         zIndex={1000000}
         classNames={{ close: 'header-menu-drawer-close' }}
         styles={{
@@ -100,7 +102,8 @@ export function HeaderMenu() {
         }}
       >
         <Flex direction="column" p="md">
-          <Flex direction="row" justify="flex-end">
+          <Flex direction="row" justify="flex-end" gap="sm" align="center">
+            <ThemeSwitch />
             <LanguageSwitch />
           </Flex>
           <Divider my="sm" />

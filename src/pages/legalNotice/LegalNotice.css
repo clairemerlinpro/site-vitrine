@@ -23,7 +23,7 @@
 
 .legal-notice-button[data-active] {
   background-color: var(--color-primary) !important;
-  color: var(--color-text) !important;
+  color: var(--color-white) !important;
 }
 
 .legal-notice-button:hover {

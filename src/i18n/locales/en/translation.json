@@ -1,4 +1,7 @@
 {
+  "themeSwitch": {
+    "label": "Toggle light and dark mode"
+  },
   "scrollToTop": {
     "label": "Scroll to top"
   },

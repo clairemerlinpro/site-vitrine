@@ -15,11 +15,11 @@ export function Logo({ height, width, className, style, ...props }: LogoProps) {
     >
       <rect width="480" height="110" fill="var(--color-grey)" />
       <g transform="translate(12,12) scale(0.8)">
-        <rect width="100" height="100" rx="20" fill="#222220" />
+        <rect width="100" height="100" rx="20" fill="var(--color-logo-icon-bg)" />
         <polyline
           points="31,32 17,50 31,68"
           fill="none"
-          stroke="#bb9476"
+          stroke="var(--color-secondary)"
           strokeWidth="7"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -29,14 +29,14 @@ export function Logo({ height, width, className, style, ...props }: LogoProps) {
           y1="70"
           x2="59"
           y2="30"
-          stroke="#e7dacf"
+          stroke="var(--color-secondary-light)"
           strokeWidth="7"
           strokeLinecap="round"
         />
         <polyline
           points="69,32 83,50 69,68"
           fill="none"
-          stroke="#bb9476"
+          stroke="var(--color-secondary)"
           strokeWidth="7"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -49,7 +49,7 @@ export function Logo({ height, width, className, style, ...props }: LogoProps) {
         fontWeight="500"
         fontSize="28"
         letterSpacing="5"
-        fill="#f7f2ee"
+        fill="var(--color-text)"
       >
         CLAIRE MERLIN
       </text>
@@ -60,7 +60,7 @@ export function Logo({ height, width, className, style, ...props }: LogoProps) {
         fontWeight="300"
         fontSize="18"
         letterSpacing="3.5"
-        fill="#bb9476"
+        fill="var(--color-secondary)"
       >
         DEV WEB & MOBILE
       </text>
