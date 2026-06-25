@@ -1,4 +1,4 @@
-import { Flex, Paper, SimpleGrid, Text } from '@mantine/core';
+import { Flex, Paper, SimpleGrid } from '@mantine/core';
 import { useTranslation } from 'react-i18next';
 import { InfoItem } from '../../components/InfoItem';
 import {
