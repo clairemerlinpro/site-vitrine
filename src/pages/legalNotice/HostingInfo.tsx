@@ -15,17 +15,17 @@ export function HostingInfo() {
     {
       icon: <BuildingOfficeIcon size={24} color="var(--color-secondary)" />,
       title: t('legalNotice.sections.hosting.name'),
-      value: 'Hosting provider',
+      value: 'Vercel Inc.',
     },
     {
       icon: <MapPinIcon size={24} color="var(--color-secondary)" />,
       title: t('legalNotice.sections.hosting.address'),
-      value: 'OVH, 2 rue Kellermann, 59100 Roubaix, France',
+      value: '340 S Lemon Ave #4133, Walnut, CA 91789 - United States.',
     },
     {
       icon: <GlobeIcon size={24} color="var(--color-secondary)" />,
       title: t('legalNotice.sections.hosting.website'),
-      value: 'https://www.ovh.com',
+      value: 'https://vercel.com/home',
     },
   ];
 
