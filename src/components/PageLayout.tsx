@@ -1,5 +1,7 @@
 import React from 'react';
 import { Flex, Title } from '@mantine/core';
+import { useTranslation } from 'react-i18next';
+import './PageLayout.css';
 
 interface PageLayoutProps {
   children: React.ReactNode;
@@ -7,8 +9,39 @@ interface PageLayoutProps {
   padding?: boolean;
 }
 
+export function SkipToContentLink() {
+  // -------- Params --------
+  const { t } = useTranslation();
+
+  // -------- Store --------
+
+  // -------- States & Refs --------
+
+  // -------- Init --------
+
+  // -------- Helpers --------
+
+  // -------- Callbacks --------
+
+  // -------- Effects --------
+
+  // -------- Renderers --------
+  return (
+    <a href="#main" className="skip-link">
+      {t('accessibility.skipToContent')}
+    </a>
+  );
+
+  // -------- Loading --------
+
+  // -------- Error --------
+
+  // -------- Main renderer --------
+}
+
 export function PageLayout({ children, padding, title }: PageLayoutProps) {
   // -------- Params --------
+  const { t } = useTranslation();
 
   // -------- Store --------
 
@@ -31,6 +64,11 @@ export function PageLayout({ children, padding, title }: PageLayoutProps) {
   // -------- Main renderer --------
   return (
     <Flex
+      component="main"
+      id="main"
+      role="main"
+      aria-label={t('accessibility.mainContentLabel')}
+      tabIndex={-1}
       bg="var(--color-background)"
       flex={1}
       direction="column"

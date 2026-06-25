@@ -96,6 +96,8 @@ export function AboutPage() {
   return (
     <PageLayout padding={true} title={t('about.title')}>
       <Flex
+        role="section"
+        aria-label={t('about.title')}
         direction={{ base: 'column', sm: 'row' }}
         gap="xl"
         align={{ base: 'stretch', sm: 'center' }}
@@ -121,7 +123,13 @@ export function AboutPage() {
         }
         labelPosition="left"
       />
-      <Flex direction={{ base: 'column', md: 'row' }} gap="md" align="stretch">
+      <Flex
+        direction={{ base: 'column', md: 'row' }}
+        gap="md"
+        align="stretch"
+        role="section"
+        aria-label={t('about.expertise.title')}
+      >
         <SimpleGrid cols={{ base: 2, xs: 2, sm: 3, md: 3 }} spacing="md" flex={1} miw={0}>
           {techStacks.map((tech) => (
             <TechStackCard key={tech.id} tech={tech} />
@@ -149,7 +157,15 @@ export function AboutPage() {
         }
         labelPosition="left"
       />
-      <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="md" flex={1} miw={0} mb="xl">
+      <SimpleGrid
+        cols={{ base: 1, sm: 2 }}
+        spacing="md"
+        flex={1}
+        miw={0}
+        mb="xl"
+        role="section"
+        aria-label={t('about.formations.title')}
+      >
         {formations.map((formation) => (
           <FormationCard key={formation.id} formation={formation} />
         ))}

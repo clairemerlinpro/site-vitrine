@@ -1,4 +1,7 @@
 {
+  "accessibility": {
+    "skipToContent": "Skip to content"
+  },
   "themeSwitch": {
     "label": "Toggle light and dark mode"
   },
@@ -9,7 +12,12 @@
     "home": "Home",
     "portfolio": "Achievements",
     "about": "About",
-    "contact": "Contact"
+    "contact": "Contact",
+    "ariaLabel": "Main menu"
+  },
+  "footer": {
+    "ariaLabel": "Footer",
+    "navigationLabel": "Navigation"
   },
   "home": {
     "about": {
@@ -19,7 +27,8 @@
       "description": "I design fast, accessible, and meticulously crafted web and mobile applications. 6 years of experience working with startups and major brands to transform your ideas into reliable and high-performing products.",
       "primaryCta": "Discover my projects",
       "secondaryCta": "Start a project",
-      "downloadResume": "Download my resume"
+      "downloadResume": "Download my resume",
+      "ariaLabel": "About"
     },
     "catchPhrase": {
       "titlePart1": "Interfaces designed for your ",
@@ -27,7 +36,8 @@
       "paragraph1Part1": "Passionate about ",
       "paragraph1Highlight": "pixel-perfect design",
       "paragraph1Part2": ", I transform your most complex ideas into fluid, intuitive and pleasant-to-use applications — from the first wireframe to production.",
-      "paragraph2": "Each line of code is designed to last: performance, maintainability and accessibility (RGAA/WCAG) are never sacrificed. The result? Reliable digital products, which inspire confidence in your users and your technical teams."
+      "paragraph2": "Each line of code is designed to last: performance, maintainability and accessibility (RGAA/WCAG) are never sacrificed. The result? Reliable digital products, which inspire confidence in your users and your technical teams.",
+      "ariaLabel": "Presentation"
     },
     "techStack": {
       "title": "Technical skills"
@@ -36,10 +46,11 @@
       "title": "Achievements",
       "cta": "See all my achievements"
     },
-    "closingCta": {
+    "contact": {
       "title": "A project in mind?",
       "description": "Whether it is to develop a mobile application, redesign your interface or strengthen your team on a React/Swift project, I can support you from the idea to production.",
-      "cta": "Let's discuss your project"
+      "cta": "Let's discuss your project",
+      "ariaLabel": "Contact"
     }
   },
   "profilePicture": {

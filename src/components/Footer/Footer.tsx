@@ -3,6 +3,7 @@ import { Divider, Flex, Group, Text } from '@mantine/core';
 import './Footer.css';
 import { Logo } from '../Logo/Logo';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const links = [
   { link: 'https://www.linkedin.com/in/claire-merlin-062241143/', label: 'LinkedIn' },
@@ -10,10 +11,32 @@ const links = [
 ];
 
 export function Footer() {
+  // -------- Params --------
+  const { t } = useTranslation();
+
+  // -------- Store --------
+
+  // -------- States & Refs --------
+
+  // -------- Init --------
   const year = new Date().getFullYear();
 
+  // -------- Helpers --------
+
+  // -------- Callbacks --------
+
+  // -------- Effects --------
+
+  // -------- Renderers --------
+
+  // -------- Loading --------
+
+  // -------- Error --------
+
+  // -------- Main renderer --------
+
   return (
-    <footer className="footer">
+    <footer className="footer" role="contentinfo" aria-label={t('footer.ariaLabel')}>
       <Flex
         direction="column"
         bg="var(--color-grey)"
@@ -36,7 +59,7 @@ export function Footer() {
           <Flex visibleFrom="sm" justify="flex-start" direction="row">
             <Logo height={60} width="auto" />
           </Flex>
-          <Group gap={8} pb="sm">
+          <Group gap={8} pb="sm" role="navigation" aria-label={t('footer.navigationLabel')}>
             {links.map((item) => (
               <a
                 key={item.label}
