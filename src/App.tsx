@@ -11,6 +11,7 @@ import { ContactPage } from './pages/contact/ContactPage';
 import { ThemeProvider } from './context/ThemeContext';
 import { LegalNotice } from './pages/legalNotice/LegalNotice';
 import { ScrollToTopButton } from './components/Buttons/ScrollToTopButton';
+import { SkipToContentLink } from './components/PageLayout';
 
 function App() {
   return (
@@ -19,8 +20,9 @@ function App() {
         <ScrollToTop />
         <ScrollToTopButton />
         <Flex direction="column" mih="100vh" w="100%" miw={0} bg="var(--color-background)">
+          <SkipToContentLink />
           <HeaderMenu />
-          <Flex component="main" direction="column" flex={1} w="100%" miw={0}>
+          <Flex direction="column" flex={1} w="100%" miw={0}>
             <Routes>
               <Route path="*" element={<HomePage />} />
               <Route path="/portfolio" element={<PortfolioPage />} />

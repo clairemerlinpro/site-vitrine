@@ -54,6 +54,8 @@ export function HomeTechStack() {
       w="100%"
       miw={0}
       style={{ overflow: 'hidden' }}
+      role="section"
+      aria-label={t('home.techStack.title')}
     >
       <Title order={2} c="var(--color-text)">
         {t('home.techStack.title')}
