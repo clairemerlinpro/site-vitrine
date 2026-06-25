@@ -1,0 +1,36 @@
+.scroll-to-top-button-wrapper {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 99;
+}
+
+.scroll-to-top-button {
+  background-color: var(--color-primary) !important;
+  color: var(--color-text) !important;
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.scroll-to-top-button:hover {
+  background-color: var(--color-secondary) !important;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 36em) {
+  .scroll-to-top-button-wrapper {
+    right: 16px;
+    bottom: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-to-top-button {
+    transition: none;
+  }
+
+  .scroll-to-top-button:hover {
+    transform: none;
+  }
+}

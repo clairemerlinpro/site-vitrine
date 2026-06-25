@@ -1,0 +1,142 @@
+{
+  "scrollToTop": {
+    "label": "Scroll to top"
+  },
+  "headerMenu": {
+    "home": "Home",
+    "portfolio": "Achievements",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "home": {
+    "about": {
+      "badge": "AVAILABLE FOR NEW PROJECTS",
+      "title": "Claire Merlin — Freelance Web & Mobile Developer",
+      "techStack": "Swift · React Native · React · Next.js",
+      "description": "I design fast, accessible, and meticulously crafted web and mobile applications. 6 years of experience working with startups and major brands to transform your ideas into reliable and high-performing products.",
+      "primaryCta": "Discover my projects",
+      "secondaryCta": "Start a project",
+      "downloadResume": "Download my resume"
+    },
+    "catchPhrase": {
+      "titlePart1": "Interfaces designed for your ",
+      "titleHighlight": "users",
+      "paragraph1Part1": "Passionate about ",
+      "paragraph1Highlight": "pixel-perfect design",
+      "paragraph1Part2": ", I transform your most complex ideas into fluid, intuitive and pleasant-to-use applications — from the first wireframe to production.",
+      "paragraph2": "Each line of code is designed to last: performance, maintainability and accessibility (RGAA/WCAG) are never sacrificed. The result? Reliable digital products, which inspire confidence in your users and your technical teams."
+    },
+    "techStack": {
+      "title": "Technical skills"
+    },
+    "projects": {
+      "title": "Achievements",
+      "cta": "See all my achievements"
+    },
+    "closingCta": {
+      "title": "A project in mind?",
+      "description": "Whether it is to develop a mobile application, redesign your interface or strengthen your team on a React/Swift project, I can support you from the idea to production.",
+      "cta": "Let's discuss your project"
+    }
+  },
+  "profilePicture": {
+    "experience": "6+ years of experience"
+  },
+  "portfolio": {
+    "title": "My achievements",
+    "description": "Concrete projects, delivered for startups and large brands, which illustrate my technical expertise in React, React Native and Swift."
+  },
+  "projectCard": {
+    "viewProject": "View project"
+  },
+  "about": {
+    "title": "My Journey",
+    "description": "Fullstack developer specializing in high-performance mobile and web development. I combine the technical rigor of a freelancer with a sharp product vision, forged within innovative structures such as La Mobilery, Premedit and 7Digital. My goal: transform your ideas into reliable, fast and meticulous products down to the smallest detail.",
+    "expertise": {
+      "title": "Technical Expertise",
+      "aiTools": "AI Tools",
+      "ciCd": "CI/CD",
+      "methods": "Methods"
+    },
+    "training": {
+      "title": "Training & Certifications"
+    }
+  },
+  "contact": {
+    "badge": "AVAILABLE FOR NEW PROJECTS",
+    "title": {
+      "part1": "Let's build something ",
+      "highlight": "extraordinary",
+      "part2": "together."
+    },
+    "description": "Whether you already have a specific project in mind or simply want to explore the possibilities, I am always available to discuss your high-performance engineering challenges.",
+    "info": {
+      "title": "Contact Information",
+      "email": "Email",
+      "phone": "Telephone",
+      "location": "Location",
+      "linkedin": "View my LinkedIn",
+      "github": "View my GitHub"
+    },
+    "form": {
+      "fields": {
+        "name": {
+          "label": "Name",
+          "placeholder": "John Doe",
+          "error": "Name is required"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "your@email.com",
+          "error": "Invalid Email"
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "Your message",
+          "error": "Message is required"
+        }
+      },
+      "submit": "Submit",
+      "feedback": {
+        "successTitle": "Success",
+        "successMessage": "Message sent successfully!",
+        "errorTitle": "Error",
+        "errorMessageDefault": "An error has occurred."
+      }
+    }
+  },
+  "legalNotice": {
+    "title": "Legal notice",
+    "tocLabel": "Table of contents",
+    "sections": {
+      "editor": {
+        "title": "Site publisher",
+        "name": "Name",
+        "legalStatus": { "title": "Legal status", "value": "Individual entrepreneur" },
+        "address": "Address",
+        "siren": "Siren/Siret number",
+        "vat": "VAT number",
+        "phone": "Phone",
+        "email": "Email"
+      },
+      "hosting": {
+        "title": "Hosting provider",
+        "name": "Name",
+        "address": "Address",
+        "website": "Website"
+      },
+      "intellectualProperty": {
+        "title": "Intellectual property",
+        "body": "All content on this website (text, images, photographs, logos, icons, videos, layout, source code, etc.) is, unless otherwise stated, the exclusive property of Claire Merlin, or subject to an authorization of use by their respective authors or beneficiaries.\n\nAny reproduction, distribution, modification, adaptation, retransmission or publication, even partial, of these different elements is strictly prohibited without the prior written consent of Claire Merlin, whatever the means or the process used.\n\nAny unauthorized exploitation of the site or any of its elements will be considered as constituting an infringement and pursued in accordance with the provisions of articles L.335-2 and following of the Intellectual Property Code."
+      },
+      "personalData": {
+        "title": "Personal data",
+        "body": "The site offers a contact form allowing visitors to send an email request. The information collected through this form (name, email address, message, and any other field you propose) is used solely to respond to your request and is neither sold, nor shared, nor transmitted to third parties.\n\nThese data are kept for a period of 12 months from our exchange, then deleted.\n\nIn accordance with the General Data Protection Regulation (GDPR) and the Informatics and Liberties Law, you have a right of access, rectification, deletion and opposition concerning your personal data. You can exercise this right by contacting us at the following address: clairemerlinpro@outlook.fr."
+      },
+      "cookies": {
+        "title": "Cookies",
+        "body": "This website does not use tracking or advertising cookies. Only technical cookies strictly necessary for the site to function may be stored."
+      }
+    }
+  }
+}
