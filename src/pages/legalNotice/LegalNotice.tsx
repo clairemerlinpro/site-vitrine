@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { Box, Button, Flex, Text, Title } from '@mantine/core';
 import { useScrollSpy } from '@mantine/hooks';
 import { useTranslation } from 'react-i18next';
-import { PageLayout } from '../../components/PageLayout';
+import { PageLayout } from '../../components/PageLayout/PageLayout';
 import './LegalNotice.css';
 import { EditorInfo } from './EditorInfo';
 import { HostingInfo } from './HostingInfo';
@@ -145,7 +145,7 @@ export function LegalNotice() {
           <Text fw={600} c="var(--color-secondary)" mb="sm">
             {t('legalNotice.tocLabel')}
           </Text>
-          <Flex direction="column" gap="xs">
+          <Flex direction="column" gap="xs" role="list" aria-label={t('legalNotice.tocLabel')}>
             {tocItems.map((item) => (
               <Button
                 key={item.id}
@@ -155,6 +155,8 @@ export function LegalNotice() {
                 data-active={activeSectionId === item.id || undefined}
                 aria-current={activeSectionId === item.id ? 'location' : undefined}
                 onClick={() => scrollToSection(item.id)}
+                role="listitem"
+                aria-label={item.label}
               >
                 {item.label}
               </Button>

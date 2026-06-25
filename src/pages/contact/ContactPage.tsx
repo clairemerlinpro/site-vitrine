@@ -1,5 +1,5 @@
 import React from 'react';
-import { PageLayout } from '../../components/PageLayout';
+import { PageLayout } from '../../components/PageLayout/PageLayout';
 import { Badge, Title, Text, Flex } from '@mantine/core';
 import { CheckIcon } from '@phosphor-icons/react';
 import { ContactForm } from './ContactForm';

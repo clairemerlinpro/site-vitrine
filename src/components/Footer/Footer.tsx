@@ -59,9 +59,11 @@ export function Footer() {
           <Flex visibleFrom="sm" justify="flex-start" direction="row">
             <Logo height={60} width="auto" />
           </Flex>
-          <Group gap={8} pb="sm" role="navigation" aria-label={t('footer.navigationLabel')}>
+          <Group gap={8} pb="sm" role="list" aria-label={t('footer.navigationLabel')}>
             {links.map((item) => (
               <a
+                role="listitem"
+                aria-label={item.label}
                 key={item.label}
                 href={item.link}
                 className="footer-link"
@@ -71,8 +73,13 @@ export function Footer() {
                 {item.label}
               </a>
             ))}
-            <Link to="/legal-notice" className="footer-link">
-              Mentions légales
+            <Link
+              to="/legal-notice"
+              className="footer-link"
+              role="listitem"
+              aria-label={t('legalNotice.title')}
+            >
+              {t('legalNotice.title')}
             </Link>
           </Group>
         </Flex>

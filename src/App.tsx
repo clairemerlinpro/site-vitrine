@@ -11,7 +11,7 @@ import { ContactPage } from './pages/contact/ContactPage';
 import { ThemeProvider } from './context/ThemeContext';
 import { LegalNotice } from './pages/legalNotice/LegalNotice';
 import { ScrollToTopButton } from './components/Buttons/ScrollToTopButton';
-import { SkipToContentLink } from './components/PageLayout';
+import { SkipToContentLink } from './components/PageLayout/PageLayout';
 
 function App() {
   return (

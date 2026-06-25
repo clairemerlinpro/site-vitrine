@@ -4,11 +4,13 @@ type InfoItemProps = {
   icon?: React.ReactNode;
   title: string;
   value: string;
+  role?: string;
+  ariaLabel?: string;
 };
 
-export function InfoItem({ icon, title, value }: InfoItemProps) {
+export function InfoItem({ icon, title, value, role, ariaLabel }: InfoItemProps) {
   return (
-    <Flex direction="row" gap="md" align="center">
+    <Flex direction="row" gap="md" align="center" role={role} aria-label={ariaLabel}>
       {icon && (
         <Box
           p="sm"
