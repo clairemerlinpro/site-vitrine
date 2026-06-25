@@ -48,10 +48,10 @@ export function HomeAbout() {
         <Badge autoContrast color="var(--color-green)" leftSection={<CheckIcon />} mb="md">
           {t('home.about.badge')}
         </Badge>
-        <Title c="var(--color-text)" order={1} fw={800}>
+        <Title c="var(--color-text)" order={1} fw={800} role="heading" aria-level={1}>
           {t('home.about.title')}
         </Title>
-        <Title c="var(--color-text)" order={2}>
+        <Title c="var(--color-text)" order={2} role="text">
           {t('home.about.techStack')}
         </Title>
         <Text c="var(--color-text)">{t('home.about.description')}</Text>
@@ -63,11 +63,13 @@ export function HomeAbout() {
           align="flex-start"
         >
           <PrimaryButton
+            ariaLabel={t('home.about.primaryCta')}
             iconRight={<ArrowRightIcon className="button_icon" size={14} />}
             onClick={() => navigate('/portfolio')}
             label={t('home.about.primaryCta')}
           />
           <SecondaryButton
+            ariaLabel={t('home.about.secondaryCta')}
             onClick={() => navigate('/contact')}
             label={t('home.about.secondaryCta')}
             iconRight={<ArrowRightIcon className="button_icon" size={14} />}

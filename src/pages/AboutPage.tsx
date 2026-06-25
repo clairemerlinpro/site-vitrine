@@ -11,10 +11,12 @@ import {
 } from '../context/TECHSTACKS';
 import { TechStackCard } from '../components/TechStackCard';
 import { Formation, FORMATIONS_EN, FORMATIONS_FR } from '../context/FORMATIONS';
-import { COMPANIES_EN, COMPANIES_FR, Company } from '../context/PROJECTS';
-import { PageLayout } from '../components/PageLayout';
+import { COMPANIES_EN, COMPANIES_FR } from '../context/PROJECTS';
+import { PageLayout } from '../components/PageLayout/PageLayout';
 import { useTranslation } from 'react-i18next';
 import { ResumeButton } from '../components/Buttons/ResumeButton';
+import { ToolsList } from '../components/ToolsList';
+import { TimelineItem } from '../components/TimelineItem';
 
 export function AboutPage() {
   // -------- Params --------
@@ -37,43 +39,9 @@ export function AboutPage() {
 
   // -------- Renderers --------
 
-  const TimelineItem = ({ company }: { company: Company }) => {
-    return (
-      <Timeline.Item bullet={<company.icon size={12} />} title={company.name} c="var(--color-text)">
-        <Text size="sm" fw={600} c="var(--color-secondary)">
-          {company.date} • {company.location}
-        </Text>
-        <Text c="var(--color-text)" size="sm">
-          {company.description}
-        </Text>
-      </Timeline.Item>
-    );
-  };
-
-  const ToolsList = ({ tools, title }: { tools: string[]; title: string }) => {
-    return (
-      <Paper shadow="xs" p="xl" bg="var(--color-grey)">
-        <Title order={3} c="var(--color-text)">
-          {title}
-        </Title>
-        <Flex direction="row" gap="md" mt="md" mb="md" wrap="wrap">
-          {tools.map((tool) => (
-            <Badge
-              key={tool}
-              bg="color-mix(in srgb, var(--color-secondary) 40%, var(--color-grey))"
-              color="var(--color-grey)"
-            >
-              {tool}
-            </Badge>
-          ))}
-        </Flex>
-      </Paper>
-    );
-  };
-
   const FormationCard = ({ formation }: { formation: Formation }) => {
     return (
-      <Paper shadow="xs" p="xl" bg="var(--color-grey)">
+      <Paper shadow="xs" p="xl" bg="var(--color-grey)" role="listitem" aria-label={formation.name}>
         <Flex direction="column" gap="md">
           {formation.type && <Badge color="var(--color-primary)">{formation.type}</Badge>}
           <Title order={3} c="var(--color-text)">
@@ -105,9 +73,21 @@ export function AboutPage() {
       >
         <Flex direction="column" gap="md" miw={0} flex={1}>
           <Text c="var(--color-text)">{t('about.description')}</Text>
-          <Timeline active={1} bulletSize={24} lineWidth={2} mt="md">
+          <Timeline
+            active={1}
+            bulletSize={24}
+            lineWidth={2}
+            mt="md"
+            role="list"
+            aria-label={t('about.experience.title')}
+          >
             {companies.map((company) => (
-              <TimelineItem key={company.id} company={company} />
+              <TimelineItem
+                key={company.id}
+                company={company}
+                role="listitem"
+                aria-label={company.name}
+              />
             ))}
           </Timeline>
         </Flex>
@@ -130,9 +110,22 @@ export function AboutPage() {
         role="section"
         aria-label={t('about.expertise.title')}
       >
-        <SimpleGrid cols={{ base: 2, xs: 2, sm: 3, md: 3 }} spacing="md" flex={1} miw={0}>
+        <SimpleGrid
+          cols={{ base: 2, xs: 2, sm: 3, md: 3 }}
+          spacing="md"
+          flex={1}
+          miw={0}
+          role="list"
+          aria-label={t('about.expertise.title')}
+        >
           {techStacks.map((tech) => (
-            <TechStackCard key={tech.id} tech={tech} />
+            <TechStackCard
+              key={tech.id}
+              tech={tech}
+              titleId={`tech-stack-name-${tech.id}`}
+              role="listitem"
+              aria-label={tech.name}
+            />
           ))}
         </SimpleGrid>
         <Flex
@@ -163,7 +156,7 @@ export function AboutPage() {
         flex={1}
         miw={0}
         mb="xl"
-        role="section"
+        role="list"
         aria-label={t('about.formations.title')}
       >
         {formations.map((formation) => (

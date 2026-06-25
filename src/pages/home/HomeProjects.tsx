@@ -48,13 +48,29 @@ export function HomeProjects() {
         {t('home.projects.title')}
       </Title>
 
-      <SimpleGrid cols={{ base: 1, xs: 2 }} spacing="md">
-        <ProjectCard key={projects[0].id} project={projects[0]} />
-        <ProjectCard key={projects[1].id} project={projects[1]} />
+      <SimpleGrid
+        cols={{ base: 1, xs: 2 }}
+        spacing="md"
+        role="list"
+        aria-label={t('home.projects.title')}
+      >
+        <ProjectCard
+          key={projects[0].id}
+          project={projects[0]}
+          role="listitem"
+          aria-label={projects[0].name}
+        />
+        <ProjectCard
+          key={projects[1].id}
+          project={projects[1]}
+          role="listitem"
+          aria-label={projects[1].name}
+        />
       </SimpleGrid>
 
       <Flex justify="center" mt="xl">
         <PrimaryButton
+          ariaLabel={t('home.projects.cta')}
           onClick={() => navigate('/portfolio')}
           label={t('home.projects.cta')}
           iconRight={<ArrowRightIcon className="button_icon" size={14} />}

@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 export const LanguageSwitch = () => {
   // -------- Params --------
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
 
   // -------- Store --------
 
@@ -27,6 +27,8 @@ export const LanguageSwitch = () => {
   // -------- Main renderer --------
   return (
     <Button
+      role="button"
+      aria-label={t('headerMenu.languageSwitch')}
       onClick={() => i18n.changeLanguage(i18n.language === 'fr' ? 'en' : 'fr')}
       variant="outline"
       radius="xl"

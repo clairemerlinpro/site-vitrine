@@ -4,8 +4,11 @@ import React from 'react';
 
 interface TechStackCardProps {
   tech: TechStack;
+  titleId?: string;
+  role?: string;
+  ariaLabel?: string;
 }
-export function TechStackCard({ tech }: TechStackCardProps) {
+export function TechStackCard({ tech, titleId, role, ariaLabel }: TechStackCardProps) {
   // -------- Params --------
 
   // -------- Store --------
@@ -28,10 +31,18 @@ export function TechStackCard({ tech }: TechStackCardProps) {
 
   // -------- Main renderer --------
   return (
-    <Paper bg={'var(--color-grey)'}>
+    <Paper bg={'var(--color-grey)'} role={role} aria-label={ariaLabel}>
       <Flex direction={'column'} justify={'center'} align="center" p="md" h="200" gap="md">
-        <Image radius="md" w={100} h={100} src={tech.icon} fit="contain" />
-        <Text fw={600} c="var(--color-text)" ta="center">
+        <Image
+          role="img"
+          radius="md"
+          w={100}
+          h={100}
+          src={tech.icon}
+          fit="contain"
+          aria-hidden="true"
+        />
+        <Text id={titleId} fw={600} c="var(--color-text)" ta="center">
           {tech.name}
         </Text>
       </Flex>

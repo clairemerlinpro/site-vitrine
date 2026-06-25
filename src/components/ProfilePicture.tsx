@@ -26,11 +26,13 @@ export function ProfilePicture() {
   return (
     <Box pos="relative" visibleFrom="sm" w={400} mb={24}>
       <Image
+        role="img"
         className="light-shadow"
         radius="md"
         w={400}
         h={400}
         src={require('../assets/photo.jpg')}
+        aria-hidden="true"
       />
       <Paper
         p="md"

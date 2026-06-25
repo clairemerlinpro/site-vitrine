@@ -10,6 +10,7 @@ interface SecondaryButtonProps {
   iconLeft?: React.ReactNode;
   disabled?: boolean;
   loading?: boolean;
+  ariaLabel: string;
 }
 
 export function SecondaryButton({
@@ -19,6 +20,7 @@ export function SecondaryButton({
   iconLeft,
   disabled,
   loading,
+  ariaLabel,
 }: SecondaryButtonProps) {
   // -------- Params --------
   const { theme } = useTheme();
@@ -46,6 +48,8 @@ export function SecondaryButton({
 
   return (
     <Button
+      role="button"
+      aria-label={ariaLabel}
       className="button"
       variant="default"
       bg={theme === 'dark' ? 'transparent' : 'var(--color-white)'}

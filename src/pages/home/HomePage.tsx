@@ -1,5 +1,5 @@
 import React from 'react';
-import { PageLayout } from '../../components/PageLayout';
+import { PageLayout } from '../../components/PageLayout/PageLayout';
 import '../../index.css';
 import { HomeAbout } from './HomeAbout';
 import { HomeCatchPhrase } from './HomeCatchPhrase';
@@ -60,6 +60,7 @@ export function HomePage() {
           {t('home.contact.description')}
         </Text>
         <SecondaryButton
+          ariaLabel={t('home.contact.cta')}
           onClick={() => navigate('/contact')}
           label={t('home.contact.cta')}
           iconRight={<ArrowRightIcon className="button_icon" size={14} />}

@@ -45,9 +45,14 @@ export function HostingInfo() {
   return (
     <Flex direction="column" gap="md">
       <Paper shadow="xl" p="xl" bg="var(--color-grey)">
-        <SimpleGrid cols={{ base: 1, xs: 1, sm: 2 }} spacing="md">
+        <SimpleGrid
+          cols={{ base: 1, xs: 1, sm: 2 }}
+          spacing="md"
+          role="list"
+          aria-label={t('legalNotice.sections.hosting.title')}
+        >
           {hostingInfo.map((item) => (
-            <InfoItem key={item.title} {...item} />
+            <InfoItem key={item.title} {...item} role="listitem" aria-label={item.title} />
           ))}
         </SimpleGrid>
       </Paper>
