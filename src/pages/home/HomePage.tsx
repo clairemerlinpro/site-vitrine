@@ -42,6 +42,8 @@ export function HomePage() {
       <HomeTechStack />
       <HomeProjects />
       <Flex
+        role="section"
+        aria-label={t('home.contact.ariaLabel')}
         px={{ base: 16, sm: 40 }}
         py={{ base: 40, sm: 80 }}
         gap="md"
@@ -52,14 +54,14 @@ export function HomePage() {
         miw={0}
       >
         <Title c="var(--color-text)" order={1} fw={800} ta="center">
-          {t('home.closingCta.title')}
+          {t('home.contact.title')}
         </Title>
         <Text c="var(--color-text)" ta="center">
-          {t('home.closingCta.description')}
+          {t('home.contact.description')}
         </Text>
         <SecondaryButton
           onClick={() => navigate('/contact')}
-          label={t('home.closingCta.cta')}
+          label={t('home.contact.cta')}
           iconRight={<ArrowRightIcon className="button_icon" size={14} />}
         />
       </Flex>

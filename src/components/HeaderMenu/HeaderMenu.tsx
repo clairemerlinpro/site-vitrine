@@ -66,11 +66,13 @@ export function HeaderMenu() {
       miw={0}
       px={{ base: 16, sm: 40 }}
       style={{ justifyContent: 'space-between', boxSizing: 'border-box' }}
+      role="banner"
+      aria-label={t('headerMenu.ariaLabel')}
     >
       <Flex justify="flex-start" direction="row">
         <Logo height={60} width="auto" />
       </Flex>
-      <Group gap={8} visibleFrom="sm">
+      <Group gap={8} visibleFrom="md">
         {items}
       </Group>
       <Group visibleFrom="md">

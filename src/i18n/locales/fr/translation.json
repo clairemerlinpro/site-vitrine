@@ -1,4 +1,7 @@
 {
+  "accessibility": {
+    "skipToContent": "Aller au contenu"
+  },
   "themeSwitch": {
     "label": "Basculer entre le mode clair et le mode sombre"
   },
@@ -9,7 +12,12 @@
     "home": "Accueil",
     "portfolio": "Réalisations",
     "about": "À propos",
-    "contact": "Contact"
+    "contact": "Contact",
+    "ariaLabel": "Menu principal"
+  },
+  "footer": {
+    "ariaLabel": "Pied de page",
+    "navigationLabel": "Navigation"
   },
   "home": {
     "about": {
@@ -19,7 +27,8 @@
       "description": "Je conçois des applications web et mobile rapides, accessibles et soignées jusqu'au dernier pixel. 6 ans d'expérience auprès de startups et grandes enseignes pour transformer vos idées en produits fiables et performants.",
       "primaryCta": "Découvrir mes projets",
       "secondaryCta": "Démarrer un projet",
-      "downloadResume": "Télécharger mon CV"
+      "downloadResume": "Télécharger mon CV",
+      "ariaLabel": "À propos"
     },
     "catchPhrase": {
       "titlePart1": "Des interfaces pensées pour vos ",
@@ -27,7 +36,8 @@
       "paragraph1Part1": "Passionnée par le ",
       "paragraph1Highlight": "pixel-perfect design",
       "paragraph1Part2": ", je transforme vos idées les plus complexes en applications fluides, intuitives et agréables à utiliser — du premier wireframe à la mise en production.",
-      "paragraph2": "Chaque ligne de code est pensée pour durer : performance, maintenabilité et accessibilité (RGAA/WCAG) ne sont jamais sacrifiées. Le résultat ? Des produits digitaux fiables, qui inspirent confiance à vos utilisateurs comme à vos équipes techniques."
+      "paragraph2": "Chaque ligne de code est pensée pour durer : performance, maintenabilité et accessibilité (RGAA/WCAG) ne sont jamais sacrifiées. Le résultat ? Des produits digitaux fiables, qui inspirent confiance à vos utilisateurs comme à vos équipes techniques.",
+      "ariaLabel": "Présentation"
     },
     "techStack": {
       "title": "Compétences techniques"
@@ -36,10 +46,11 @@
       "title": "Réalisations",
       "cta": "Voir toutes mes réalisations"
     },
-    "closingCta": {
+    "contact": {
       "title": "Un projet en tête ?",
       "description": "Que ce soit pour développer une application mobile, refondre votre interface ou renforcer votre équipe sur un projet React/Swift, je peux vous accompagner de l'idée à la mise en production.",
-      "cta": "Discutons de votre projet"
+      "cta": "Discutons de votre projet",
+      "ariaLabel": "Contact"
     }
   },
   "profilePicture": {

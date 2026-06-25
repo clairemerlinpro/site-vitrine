@@ -34,6 +34,8 @@ export function HomeAbout() {
   // -------- Main renderer --------
   return (
     <Flex
+      role="section"
+      aria-label={t('home.about.ariaLabel')}
       direction={{ base: 'column', md: 'row' }}
       gap="xl"
       align="center"

@@ -41,6 +41,8 @@ export function HomeProjects() {
       direction="column"
       w="100%"
       miw={0}
+      role="section"
+      aria-label={t('home.projects.title')}
     >
       <Title order={2} c="var(--color-text)">
         {t('home.projects.title')}
