@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+# Claire Merlin — Site vitrine
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Site vitrine professionnel de **Claire Merlin**, développeuse freelance web & mobile. Présentation de son parcours, de ses compétences techniques, de ses réalisations et d'un formulaire de contact.
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+Application React single-page (SPA) responsive, pensée pour mettre en avant une expertise en développement **React**, **React Native** et **Swift**, avec un soin particulier porté à l'**accessibilité** (RGAA / WCAG) et à l'expérience utilisateur.
 
-### `npm start`
+### Pages
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+| Route | Contenu |
+|---|---|
+| `/` | Accueil — présentation, stack technique, projets mis en avant, appel à l'action |
+| `/portfolio` | Réalisations |
+| `/about` | Parcours, expériences, formations, téléchargement du CV |
+| `/contact` | Coordonnées et formulaire de contact |
+| `/legal-notice` | Mentions légales |
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Fonctionnalités
 
-### `npm test`
+- **Internationalisation** (français / anglais) via i18next
+- **Thème clair / sombre** avec persistance de la préférence
+- **Formulaire de contact** via [Web3Forms](https://web3forms.com)
+- **Accessibilité** : lien d'évitement, landmarks sémantiques, attributs `lang`, carousel accessible, navigation clavier
+- **Carousel** des compétences techniques avec défilement automatique (pause disponible)
+- **Bouton retour en haut** de page
+- **Téléchargement du CV** (FR / EN selon la langue active)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Stack technique
 
-### `npm run build`
+| Catégorie | Technologies |
+|---|---|
+| Framework | React 19, TypeScript |
+| UI | Mantine 9, Phosphor Icons |
+| Routing | React Router 7 |
+| i18n | i18next, react-i18next |
+| Carousel | Embla Carousel |
+| Build | Create React App (react-scripts) |
+| Formatage | Prettier |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Prérequis
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Node.js** 18+
+- **npm** 9+
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Installation
 
-### `npm run eject`
+```bash
+git clone <url-du-repo>
+cd site-vitrine
+npm install --legacy-peer-deps
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+> `--legacy-peer-deps` est nécessaire en raison d'un conflit de peer dependencies entre `react-scripts` et TypeScript 6.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Configuration
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Copiez le fichier d'exemple et renseignez votre clé Web3Forms :
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+cp .env.example .env
+```
 
-## Learn More
+```env
+REACT_APP_WEB3FORMS_ACCESS_KEY=votre_cle_ici
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+La clé est obtenue gratuitement sur [web3forms.com](https://web3forms.com). L'adresse e-mail de réception est celle configurée lors de la création de la clé.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Scripts disponibles
 
-### Code Splitting
+| Commande | Description |
+|---|---|
+| `npm start` | Lance le serveur de développement sur [http://localhost:3000](http://localhost:3000) |
+| `npm run build` | Génère le build de production dans `build/` |
+| `npm test` | Lance les tests (Jest + Testing Library) |
+| `npm run format` | Formate le code avec Prettier |
+| `npm run format:check` | Vérifie le formatage sans modifier les fichiers |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Structure du projet
 
-### Analyzing the Bundle Size
+```
+src/
+├── assets/           # Images, icônes, CV (PDF)
+├── components/       # Composants réutilisables (Header, Footer, boutons…)
+├── context/          # Données statiques (projets, formations, stack)
+├── i18n/             # Configuration i18next et traductions FR / EN
+├── pages/            # Pages de l'application
+├── services/         # Appels API (formulaire de contact)
+└── utils/            # Utilitaires (scroll, thème, langue)
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Déploiement
 
-### Making a Progressive Web App
+Le build de production est généré dans le dossier `build/` :
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+npm run build
+```
 
-### Advanced Configuration
+Le site est une SPA : configurez votre hébergeur pour rediriger toutes les routes vers `index.html` (rewrite).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Auteure
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Claire Merlin** — Développeuse freelance web & mobile  
+Swift · React Native · React · Next.js
