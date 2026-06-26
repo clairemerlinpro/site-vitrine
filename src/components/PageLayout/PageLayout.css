@@ -21,8 +21,7 @@
 }
 
 #main:focus {
-  outline: 2px solid var(--color-secondary);
-  outline-offset: -2px;
+  outline: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
