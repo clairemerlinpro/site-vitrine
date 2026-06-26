@@ -19,13 +19,7 @@ import { ToolsList } from '../components/ToolsList';
 import { TimelineItem } from '../components/TimelineItem';
 
 export function AboutPage() {
-  // -------- Params --------
   const { t, i18n } = useTranslation();
-  // -------- Store --------
-
-  // -------- States & Refs --------
-
-  // -------- Init --------
   const formations = i18n.language === 'fr' ? FORMATIONS_FR : FORMATIONS_EN;
   const companies = i18n.language === 'fr' ? COMPANIES_FR : COMPANIES_EN;
   const techStacks = i18n.language === 'fr' ? TECHSTACKS_FR : TECHSTACKS_EN;

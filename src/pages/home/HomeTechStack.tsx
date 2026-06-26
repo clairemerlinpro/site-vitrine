@@ -70,7 +70,11 @@ export function HomeTechStack() {
           }
           onClick={() => setIsAutoplayPaused((paused) => !paused)}
         >
-          {isAutoplayPaused ? <PlayIcon size={18} weight="bold" /> : <PauseIcon size={18} weight="bold" />}
+          {isAutoplayPaused ? (
+            <PlayIcon size={18} weight="bold" />
+          ) : (
+            <PauseIcon size={18} weight="bold" />
+          )}
         </ActionIcon>
       </Flex>
       <Carousel
