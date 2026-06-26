@@ -3,28 +3,8 @@ import { GlobeIcon } from '@phosphor-icons/react';
 import { useTranslation } from 'react-i18next';
 
 export const LanguageSwitch = () => {
-  // -------- Params --------
   const { i18n, t } = useTranslation();
 
-  // -------- Store --------
-
-  // -------- States & Refs --------
-
-  // -------- Init --------
-
-  // -------- Helpers --------
-
-  // -------- Callbacks --------
-
-  // -------- Effects --------
-
-  // -------- Renderers --------
-
-  // -------- Loading --------
-
-  // -------- Error --------
-
-  // -------- Main renderer --------
   return (
     <Button
       role="button"
@@ -33,7 +13,7 @@ export const LanguageSwitch = () => {
       variant="outline"
       radius="xl"
       color="var(--color-text)"
-      leftSection={<GlobeIcon size={16} />}
+      leftSection={<GlobeIcon size={16} aria-hidden="true" />}
     >
       {i18n.language === 'fr' ? 'EN' : 'FR'}
     </Button>

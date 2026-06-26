@@ -13,6 +13,8 @@ i18n
       fr: { translation: fr },
       en: { translation: en },
     },
+    supportedLngs: ['fr', 'en'],
+    load: 'languageOnly',
     fallbackLng: 'fr',
     interpolation: {
       escapeValue: false, // React échappe déjà le HTML

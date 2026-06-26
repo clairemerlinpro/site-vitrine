@@ -6,14 +6,7 @@ import { PageLayout } from '../components/PageLayout/PageLayout';
 import { useTranslation } from 'react-i18next';
 
 export function PortfolioPage() {
-  // -------- Params --------
   const { t, i18n } = useTranslation();
-
-  // -------- Store --------
-
-  // -------- States & Refs --------
-
-  // -------- Init --------
   const projects = i18n.language === 'fr' ? PROJECTS_FR : PROJECTS_EN;
 
   // -------- Helpers --------

@@ -8,15 +8,8 @@ import { useTranslation } from 'react-i18next';
 import { PROJECTS_EN, PROJECTS_FR } from '../../context/PROJECTS';
 
 export function HomeProjects() {
-  // -------- Params --------
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
-
-  // -------- Store --------
-
-  // -------- States & Refs --------
-
-  // -------- Init --------
   const projects = i18n.language === 'fr' ? PROJECTS_FR : PROJECTS_EN;
 
   // -------- Helpers --------

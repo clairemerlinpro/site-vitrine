@@ -5,7 +5,6 @@ import resumeENPdf from '../../assets/CVEN.pdf';
 import { DownloadSimpleIcon } from '@phosphor-icons/react';
 
 export function ResumeButton() {
-  // -------- Params --------
   const { t, i18n } = useTranslation();
 
   // -------- Store --------
