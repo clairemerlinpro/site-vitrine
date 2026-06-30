@@ -3,10 +3,11 @@ import { Flex } from '@mantine/core';
 import { EnvelopeSimpleIcon, MapPinIcon, PhoneIcon } from '@phosphor-icons/react/dist/ssr';
 import { CONTACT_EMAIL } from './ContactPage';
 import { SecondaryButton } from '../../components/Buttons/SecondaryButton';
-import { ArrowRightIcon } from '@phosphor-icons/react';
+import { ArrowRightIcon, CalendarIcon } from '@phosphor-icons/react';
 import { useTranslation } from 'react-i18next';
 import { InfoItem } from '../../components/InfoItem';
 import { ResumeButton } from '../../components/Buttons/ResumeButton';
+import { PrimaryButton } from '../../components/Buttons/PrimaryButton';
 
 export function ContactInfo() {
   // -------- Params --------
@@ -53,11 +54,17 @@ export function ContactInfo() {
       <Title order={2} c="var(--color-text)">
         {t('contact.info.title')}
       </Title>
-      <Flex direction="column" gap="md" mt="md" role="list" aria-label={t('contact.info.title')}>
+      <Flex direction="column" gap="md" my="md" role="list" aria-label={t('contact.info.title')}>
         {infoItems.map((item) => (
           <InfoItem key={item.title} {...item} role="listitem" aria-label={item.title} />
         ))}
       </Flex>
+      <PrimaryButton
+        ariaLabel={t('contact.info.bookMeeting')}
+        label={t('contact.info.bookMeeting')}
+        iconRight={<CalendarIcon className="button_icon" size={14} />}
+        onClick={() => window.open('https://doodle.com/bp/clairemerlin/meetings', '_blank')}
+      />
       <Divider mt="xl" color="var(--color-primary)" />
       <Flex
         direction={{ base: 'column', sm: 'row' }}
