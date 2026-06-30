@@ -98,6 +98,7 @@
       "email": "Email",
       "phone": "Telephone",
       "location": "Location",
+      "bookMeeting": "Book a meeting",
       "linkedin": "View my LinkedIn",
       "github": "View my GitHub"
     },
