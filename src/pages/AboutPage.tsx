@@ -4,6 +4,8 @@ import { ProfilePicture } from '../components/ProfilePicture';
 import {
   AI_TOOLS,
   CI_CD_TOOLS,
+  LANGUAGE_EN,
+  LANGUAGE_FR,
   METHODS_EN,
   METHODS_FR,
   TECHSTACKS_EN,
@@ -24,6 +26,7 @@ export function AboutPage() {
   const companies = i18n.language === 'fr' ? COMPANIES_FR : COMPANIES_EN;
   const techStacks = i18n.language === 'fr' ? TECHSTACKS_FR : TECHSTACKS_EN;
   const methods = i18n.language === 'fr' ? METHODS_FR : METHODS_EN;
+  const languages = i18n.language === 'fr' ? LANGUAGE_FR : LANGUAGE_EN;
 
   // -------- Helpers --------
 
@@ -132,6 +135,7 @@ export function AboutPage() {
           <ToolsList title={t('about.expertise.aiTools')} tools={AI_TOOLS} />
           <ToolsList title={t('about.expertise.ciCd')} tools={CI_CD_TOOLS} />
           <ToolsList title={t('about.expertise.methods')} tools={methods} />
+          <ToolsList title={t('about.expertise.languages')} languages={languages} />
         </Flex>
       </Flex>
       <Divider
