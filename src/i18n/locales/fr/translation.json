@@ -79,7 +79,8 @@
       "title": "Expertise Technique",
       "aiTools": "Outils IA",
       "ciCd": "CI/CD",
-      "methods": "Méthodes"
+      "methods": "Méthodes",
+      "languages": "Langues"
     },
     "formations": {
       "title": "Formations & Certifications"

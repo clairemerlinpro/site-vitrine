@@ -104,7 +104,7 @@ export const PROJECTS_FR: Project[] = [
     description:
       "Application mobile en Swift accompagnant les coureurs blessés dans leur rééducation, conçue avec des médecins du sport et coachs sportifs lors d'ateliers design dédiés.",
     image: require('../assets/projects/RunningCare.png'),
-    techStack: ['Swift'],
+    techStack: ['Swift', 'Vue.js'],
   },
   {
     id: 12,
